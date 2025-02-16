@@ -11,7 +11,7 @@
 <body class="bg-gradient-to-br from-gray-900 via-blue-800 to-gray-600 h-screen flex items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-4xl h-[80vh] overflow-y-auto">
         <div class="text-center">
-            <h1 class="text-2xl font-bold text-gray-800 mb-4">Tambah Customer</h1>
+            <h1 class="text-2xl font-bold text-gray-800 mb-4">Edit Data Customer</h1>
             <p class="text-gray-600 mb-6">Isi form di bawah ini.</p>
         </div>
 
@@ -133,7 +133,7 @@
 
             <button type="submit"
                 class="block w-full text-center bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200">
-                Tambah
+                Update
             </button>
         </form>
     </div>
