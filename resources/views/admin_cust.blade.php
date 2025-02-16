@@ -43,7 +43,7 @@
 
                 <div class="max-w-full overflow-x-auto max-h-96 overflow-y-auto">
                     <table class="min-w-max bg-white border border-gray-300 shadow rounded mt-4 text-sm">
-                        <thead class="bg-blue-600 text-white">
+                        <thead class="bg-gray-400 text-white">
                             <tr>
                                 <th class="px-4 py-2 text-center font-semibold">Nama</th>
                                 <th class="px-4 py-2 text-center font-semibold">Kota</th>
