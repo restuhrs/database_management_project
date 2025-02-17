@@ -21,7 +21,6 @@
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
-
 </head>
 
 <body class="m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
@@ -39,7 +38,7 @@
 
         <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
             <ul class="flex flex-col pl-0 mb-0">
-                <li class="mt-0.5 w-full">
+                <li class="mt-4 w-full">
                     <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
                             <svg class="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 45 40">
@@ -85,11 +84,11 @@
                     </a>
                 </li>
 
-                <li class="w-full mt-4">
+                <li class="w-full mt-6">
                     <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase opacity-60">Account pages</h6>
                 </li>
 
-                <li class="mt-0.5 w-full">
+                <li class="mt-2 w-full">
                     <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -110,13 +109,14 @@
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Logout</span>
                     </a>
                 </li>
+            </ul>
     </aside>
 
     <!-- end sidenav -->
 
     <main class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
         <!-- Navbar -->
-        <nav class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start" navbar-main navbar-scroll="true">
+        <nav class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all shadow-lg duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start" navbar-main navbar-scroll="true">
             <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
                 <nav>
                     <!-- breadcrumb -->
@@ -201,6 +201,7 @@
         @yield('content')
     </main>
     </div>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 <!-- plugin for charts  -->

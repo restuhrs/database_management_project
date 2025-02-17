@@ -20,7 +20,7 @@
                             </g>
                         </g>
                     </svg>
-                    <h2 class="text-2xl font-bold mb-1">Dashboard</h2>
+                    <h2 class="text-2xl font-bold mb-1 text-gray-800">Dashboard</h2>
                 </div>
 
                 <!-- cards -->
