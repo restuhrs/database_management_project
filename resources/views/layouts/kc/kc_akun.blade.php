@@ -1,4 +1,4 @@
-@extends('layouts/main')
+@extends('layouts.kc.main')
 @vite('resources/css/app.css')
 
 @section('content')
@@ -8,9 +8,10 @@
             <div class="container">
                 <div class="flex items-center space-x-3 mb-10">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 mr-3 text-gray-800">
-                        <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
+                        <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z" clip-rule="evenodd" />
+                        <path d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
                     </svg>
-                    <h2 class="text-2xl font-bold mb-1 text-gray-800">Data Akun</h2>
+                    <h2 class="text-2xl font-bold mb-1 text-gray-800">Akun Salesman</h2>
                 </div>
 
                 <div class="flex items-center justify-between">
@@ -33,6 +34,7 @@
                                 <th class="px-4 py-2 text-center font-semibold">ID</th>
                                 <th class="px-4 py-2 text-center font-semibold">Username</th>
                                 <th class="px-4 py-2 text-center font-semibold">Role</th>
+                                <th class="px-4 py-2 text-center font-semibold">Status</th>
                                 <th class="px-4 py-2 text-center font-semibold">Aksi</th>
                             </tr>
                         </thead>
@@ -40,16 +42,21 @@
                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                 <td class="px-3 py-2 text-center">1</td>
                                 <td class="px-3 py-2 text-center">fadjri</td>
-                                <td class="px-3 py-2 text-center">sales</td>
+                                <td class="px-3 py-2 text-center">admin</td>
+                                <td class="px-3 py-2 text-center">
+                                    <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
+                                        Aktif
+                                    </button>
+                                </td>
                                 <td class="px-3 py-2 flex justify-center space-x-2">
                                     <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
-                                        <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                         </svg>
                                     </button>
                                     <button class="bg-blue-600 text-white px-2 py-2 rounded shadow hover:bg-blue-700 transition">
-                                        <svg class="w-6 h-6 ml-1 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
                                         </svg>
                                     </button>
                                 </td>
@@ -58,15 +65,20 @@
                                 <td class="px-3 py-2 text-center">1</td>
                                 <td class="px-3 py-2 text-center">fadjri</td>
                                 <td class="px-3 py-2 text-center">sales</td>
+                                <td class="px-3 py-2 text-center">
+                                    <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
+                                        Aktif
+                                    </button>
+                                </td>
                                 <td class="px-3 py-2 flex justify-center space-x-2">
                                     <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
-                                        <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                         </svg>
                                     </button>
                                     <button class="bg-blue-600 text-white px-2 py-2 rounded shadow hover:bg-blue-700 transition">
-                                        <svg class="w-6 h-6 ml-1 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
                                         </svg>
                                     </button>
                                 </td>
@@ -75,15 +87,20 @@
                                 <td class="px-3 py-2 text-center">1</td>
                                 <td class="px-3 py-2 text-center">fadjri</td>
                                 <td class="px-3 py-2 text-center">sales</td>
+                                <td class="px-3 py-2 text-center">
+                                    <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
+                                        Aktif
+                                    </button>
+                                </td>
                                 <td class="px-3 py-2 flex justify-center space-x-2">
                                     <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
-                                        <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                         </svg>
                                     </button>
                                     <button class="bg-blue-600 text-white px-2 py-2 rounded shadow hover:bg-blue-700 transition">
-                                        <svg class="w-6 h-6 ml-1 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
                                         </svg>
                                     </button>
                                 </td>
@@ -92,119 +109,108 @@
                                 <td class="px-3 py-2 text-center">1</td>
                                 <td class="px-3 py-2 text-center">fadjri</td>
                                 <td class="px-3 py-2 text-center">sales</td>
+                                <td class="px-3 py-2 text-center">
+                                    <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
+                                        Aktif
+                                    </button>
+                                </td>
                                 <td class="px-3 py-2 flex justify-center space-x-2">
                                     <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
-                                        <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                         </svg>
                                     </button>
                                     <button class="bg-blue-600 text-white px-2 py-2 rounded shadow hover:bg-blue-700 transition">
-                                        <svg class="w-6 h-6 ml-1 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
                                         </svg>
                                     </button>
                                 </td>
                             </tr>
                             <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                <td class="px-3 py-2 text-center">Andi</td>
-                                <td class="px-3 py-2 text-center">Jakarta</td>
-                                <td class="px-3 py-2 text-center">12-05-1985</td>
-                                <td class="px-3 py-2 text-center">Sedan</td>
-                                <td class="px-3 py-2 text-center">Kristiawan</td>
-                                <td class="px-3 py-2 text-center">Pondok Cabe</td>
+                                <td class="px-3 py-2 text-center">1</td>
+                                <td class="px-3 py-2 text-center">fadjri</td>
+                                <td class="px-3 py-2 text-center">sales</td>
                                 <td class="px-3 py-2 text-center">
                                     <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                        Pending
+                                        Aktif
                                     </button>
                                 </td>
-                                <td class="px-6 py-2">Sedang di luar kota</td>
                                 <td class="px-3 py-2 flex justify-center space-x-2">
                                     <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
-                                        <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                         </svg>
                                     </button>
                                     <button class="bg-blue-600 text-white px-2 py-2 rounded shadow hover:bg-blue-700 transition">
-                                        <svg class="w-6 h-6 ml-1 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
                                         </svg>
                                     </button>
                                 </td>
                             </tr>
                             <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                <td class="px-3 py-2 text-center">Andi</td>
-                                <td class="px-3 py-2 text-center">Jakarta</td>
-                                <td class="px-3 py-2 text-center">12-05-1985</td>
-                                <td class="px-3 py-2 text-center">Sedan</td>
-                                <td class="px-3 py-2 text-center">Kristiawan</td>
-                                <td class="px-3 py-2 text-center">Pondok Cabe</td>
+                                <td class="px-3 py-2 text-center">1</td>
+                                <td class="px-3 py-2 text-center">fadjri</td>
+                                <td class="px-3 py-2 text-center">sales</td>
                                 <td class="px-3 py-2 text-center">
                                     <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                        Pending
+                                        Aktif
                                     </button>
                                 </td>
-                                <td class="px-6 py-2">Sedang di luar kota</td>
                                 <td class="px-3 py-2 flex justify-center space-x-2">
                                     <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
-                                        <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                         </svg>
                                     </button>
                                     <button class="bg-blue-600 text-white px-2 py-2 rounded shadow hover:bg-blue-700 transition">
-                                        <svg class="w-6 h-6 ml-1 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
                                         </svg>
                                     </button>
                                 </td>
                             </tr>
                             <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                <td class="px-3 py-2 text-center">Andi</td>
-                                <td class="px-3 py-2 text-center">Jakarta</td>
-                                <td class="px-3 py-2 text-center">12-05-1985</td>
-                                <td class="px-3 py-2 text-center">Sedan</td>
-                                <td class="px-3 py-2 text-center">Kristiawan</td>
-                                <td class="px-3 py-2 text-center">Pondok Cabe</td>
+                                <td class="px-3 py-2 text-center">1</td>
+                                <td class="px-3 py-2 text-center">fadjri</td>
+                                <td class="px-3 py-2 text-center">sales</td>
                                 <td class="px-3 py-2 text-center">
                                     <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                        Pending
+                                        Aktif
                                     </button>
                                 </td>
-                                <td class="px-6 py-2">Sedang di luar kota</td>
                                 <td class="px-3 py-2 flex justify-center space-x-2">
                                     <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
-                                        <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                         </svg>
                                     </button>
                                     <button class="bg-blue-600 text-white px-2 py-2 rounded shadow hover:bg-blue-700 transition">
-                                        <svg class="w-6 h-6 ml-1 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
                                         </svg>
                                     </button>
                                 </td>
                             </tr>
                             <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                <td class="px-3 py-2 text-center">Andi</td>
-                                <td class="px-3 py-2 text-center">Jakarta</td>
-                                <td class="px-3 py-2 text-center">12-05-1985</td>
-                                <td class="px-3 py-2 text-center">Sedan</td>
-                                <td class="px-3 py-2 text-center">Kristiawan</td>
-                                <td class="px-3 py-2 text-center">Pondok Cabe</td>
+                                <td class="px-3 py-2 text-center">1</td>
+                                <td class="px-3 py-2 text-center">fadjri</td>
+                                <td class="px-3 py-2 text-center">sales</td>
                                 <td class="px-3 py-2 text-center">
                                     <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                        Pending
+                                        Aktif
                                     </button>
                                 </td>
-                                <td class="px-6 py-2">Sedang di luar kota</td>
                                 <td class="px-3 py-2 flex justify-center space-x-2">
                                     <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
-                                        <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                         </svg>
                                     </button>
                                     <button class="bg-blue-600 text-white px-2 py-2 rounded shadow hover:bg-blue-700 transition">
-                                        <svg class="w-6 h-6 ml-1 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                                            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
                                         </svg>
                                     </button>
                                 </td>

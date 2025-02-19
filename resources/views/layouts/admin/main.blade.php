@@ -21,6 +21,8 @@
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <!-- Tailwind css icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
@@ -28,12 +30,14 @@
     <aside class="max-w-62.5 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-white p-0 antialiased shadow-none transition-transform duration-200 xl:left-0 xl:translate-x-0 xl:bg-transparent">
         <div class="h-19.5 mb-2">
             <i class="absolute top-0 right-0 hidden p-4 opacity-50 cursor-pointer fas fa-times text-slate-400 xl:hidden" sidenav-close></i>
-            <a class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-slate-700" href="javascript:;">
-                <img src="https://i.pinimg.com/474x/ec/fb/cc/ecfbcc8e62cbd0e18b4de89960ecb606.jpg" class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-16 rounded-xl mb-2" alt="logo" />
+            <a class="flex items-center px-8 py-6 m-0 text-sm whitespace-nowrap text-slate-700" href="javascript:;">
+                <img src="https://i.pinimg.com/474x/ec/fb/cc/ecfbcc8e62cbd0e18b4de89960ecb606.jpg" class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-16 rounded-xl mr-2" alt="logo" />
                 <span class="ml-1 font-bold text-lg transition-all duration-200 ease-nav-brand">CAR DEAL</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 ml-2">
+                    <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                </svg>
             </a>
         </div>
-
         <hr class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
 
         <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
@@ -201,7 +205,12 @@
         @yield('content')
     </main>
     </div>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+            const sidebar = document.querySelector('aside');
+            sidebar.classList.toggle('-translate-x-full');
+        });
+    </script>
 </body>
 
 <!-- plugin for charts  -->
