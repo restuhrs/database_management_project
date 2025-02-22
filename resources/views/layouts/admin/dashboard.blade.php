@@ -21,90 +21,136 @@
             <h2 class="text-2xl font-bold mb-1 text-gray-800">Dashboard</h2>
         </div>
 
-        <!-- cards -->
-        <div class=" w-full py-6 mx-auto">
-            <!-- cards row 1 -->
-            <div class="w-full max-w-full px-1 mt-0 lg:w-7/12 lg:flex-none">
+
+        <!-- Row 1 -->
+        <div class="flex flex-wrap">
+            <!-- Card 1 -->
+            <div class="w-full lg:w-7/12 px-1">
                 <div class="border-black/12.5 shadow-soft-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
-                        <h6>Customer Databases</h6>
+                        <span class="font-semibold text-2xl text-blue-600">Customer Databases</span>
                         <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">4% more</span> in 2024
                         </p>
                     </div>
-                    <div class="flex-auto p-4">
-                        <div>
-                            <canvas id="chart-line" height="300"></canvas>
+                    <div class="flex justify-center p-2 mt-4">
+                        <canvas id="chart-pie" width="300" height="300"></canvas>
+                    </div>
+                    <hr class="h-px mt-4 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
+                    <div class="ml-6 text-sm mt-6">
+                        <div class="mb-4">
+                            <span class="font-semibold">Pusat Data : 234</span>
+                        </div>
+                        <div class="mb-4">
+                            <span class="font-semibold">Follow Up Sales : 78</span>
+                        </div>
+                        <div class="mb-4">
+                            <span class="font-semibold">Saved by Sales : 54</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
 
-            <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px]">
-                <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
-                    <thead class="bg-gray-300 text-black">
-                        <tr>
-                            <th class="px-4 py-2 text-center font-semibold">Nama</th>
-                            <th class="px-4 py-2 text-center font-semibold">Follow Up</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-700">
-                        <tr class="border-b hover:bg-gray-100 transition duration-200">
-                            <td class="px-3 py-2 text-center">Andi</td>
-                            <td class="px-3 py-2 text-center">Jakarta</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-100 transition duration-200">
-                            <td class="px-3 py-2 text-center">Andi</td>
-                            <td class="px-3 py-2 text-center">Jakarta</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-100 transition duration-200">
-                            <td class="px-3 py-2 text-center">Andi</td>
-                            <td class="px-3 py-2 text-center">Jakarta</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-100 transition duration-200">
-                            <td class="px-3 py-2 text-center">Andi</td>
-                            <td class="px-3 py-2 text-center">Jakarta</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-100 transition duration-200">
-                            <td class="px-3 py-2 text-center">Andi</td>
-                            <td class="px-3 py-2 text-center">Jakarta</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-100 transition duration-200">
-                            <td class="px-3 py-2 text-center">Andi</td>
-                            <td class="px-3 py-2 text-center">Jakarta</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-100 transition duration-200">
-                            <td class="px-3 py-2 text-center">Andi</td>
-                            <td class="px-3 py-2 text-center">Jakarta</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-100 transition duration-200">
-                            <td class="px-3 py-2 text-center">Andi</td>
-                            <td class="px-3 py-2 text-center">Jakarta</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- card 2 -->
+
+            <div class="w-full max-w-full px-3 md:w-1/2 md:flex-none lg:w-1/3 lg:flex-none">
+                <div class="border-black/12.5 shadow-soft-xl relative flex h-full min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
+                    <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
+                        <span class="font-semibold text-xl text-blue-600">Sales Goals Bulan Februari</span>
+                        <p class="text-sm leading-normal">
+                            <i class="fa fa-arrow-up text-lime-500"></i>
+                            <span class="font-semibold">24%</span> this month
+                        </p>
+
+                        <div class="flex items-center w-56 ml-auto mt-7 mb-2">
+                            <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease-soft">
+                                <span class="text-sm ease-soft leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-tr-none rounded-br-none border border-r-0 border-transparent bg-transparent py-2 px-2.5 text-center font-normal text-slate-500 transition-all">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" class="pl-8.75 text-sm ease-soft w-full leading-5.6 relative -ml-px block min-w-0 flex-auto rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 pr-3 text-gray-700 transition-all placeholder:text-gray-500 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Search..." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-auto p-4">
+                        <div class="before:border-r-solid relative before:absolute before:top-0 before:left-4 before:h-full before:border-r-2 before:border-r-slate-100 before:content-[''] before:lg:-ml-px">
+                            <div class="relative mb-4 mt-0 after:clear-both after:table after:content-['']">
+                                <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px]">
+                                    <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
+                                        <thead class="bg-gray-300 text-black">
+                                            <tr>
+                                                <th class="px-4 py-2 text-center font-semibold">No.</th>
+                                                <th class="px-4 py-2 text-center font-semibold">Nama</th>
+                                                <th class="px-4 py-2 text-center font-semibold">Follow Up</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-gray-700">
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">1</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">2</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">3</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">4</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">5</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">6</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">7</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">8</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
+                                                <td class="px-3 py-2 text-center">9</td>
+                                                <td class="px-3 py-2 text-center">Andi</td>
+                                                <td class="px-3 py-2 text-center">50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- cards row 2 -->
+
         </div>
 
-        <footer class="pt-4">
-            <div class="w-full px-6 mx-auto mb-5">
-                <div class="flex flex-wrap items-center -mx-3 lg:justify-between">
-                    <div class="w-full max-w-full px-3 shrink-0 lg:mb-0 lg:w-1/2 lg:flex-none">
-                        <div class="text-sm leading-normal text-center text-slate-500 lg:text-left">
-                            ©
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                            CAR DEAL. All rights reserved.
-                        </div>
-                    </div>
-                </div>
+
+        <footer class="w-full mt-4 flex border-t pt-4">
+            <div class="text-sm text-slate-500">
+                © <script>
+                    document.write(new Date().getFullYear());
+                </script> CAR DEAL. All rights reserved.
             </div>
         </footer>
-    </div>
-</main>
 </main>
 
 @endsection

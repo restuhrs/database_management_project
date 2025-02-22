@@ -34,7 +34,7 @@
         <div class="h-20 mb-2 flex items-center">
             <img src="https://i.pinimg.com/474x/ec/fb/cc/ecfbcc8e62cbd0e18b4de89960ecb606.jpg" class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-12 ml-4 bg-blue-600 rounded-lg" alt="logo" />
             <span class="ml-5 text-gray-800 font-bold text-lg transition-all duration-200 ease-nav-brand">CAR DEAL</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer ml-10" onclick="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer ml-10 transition-colors hover:text-blue-600" onclick="toggleSidebar()">
                 <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
             </svg>
         </div>
@@ -140,60 +140,60 @@
 
     <!-- end sidenav -->
 
-     <!-- Navbar -->
-     <nav class="ml-80 flex flex-wrap items-center justify-between px-6 py-2 mx-6 transition-all shadow-lg duration-250 ease-soft-in rounded-2xl">
-            <div class="flex items-center justify-between w-full px-4 py-1 mx-auto">
-                <nav>
-                    <!-- Breadcrumb -->
-                    <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
-                        <li class="text-sm leading-normal">
-                            <a class="opacity-50 text-slate-700" href="#">Pages</a>
-                        </li>
-                        <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:content-['/'] before:pr-2 before:text-gray-600" aria-current="page">Dashboard</li>
-                    </ol>
-                    <h6 class="mb-0 font-bold capitalize">Dashboard</h6>
-                </nav>
+    <!-- Navbar -->
+    <nav class="ml-80 flex flex-wrap items-center justify-between px-6 py-2 mx-6 transition-all shadow-lg duration-250 ease-soft-in rounded-2xl">
+        <div class="flex items-center justify-between w-full px-4 py-1 mx-auto">
+            <nav>
+                <!-- Breadcrumb -->
+                <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
+                    <li class="text-sm leading-normal">
+                        <a class="opacity-50 text-slate-700" href="#">Pages</a>
+                    </li>
+                    <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:content-['/'] before:pr-2 before:text-gray-600" aria-current="page">Dashboard</li>
+                </ol>
+                <h6 class="mb-0 font-bold capitalize">Dashboard</h6>
+            </nav>
 
-                <ul class="flex flex-row justify-end pl-0 mb-0 list-none md-max:w-full">
-                    <!-- notifications -->
-                    <li class="relative flex items-center pr-2 mr-8">
-                        <p class="hidden transform-dropdown-show"></p>
-                        <a href="#" class="block p-0 text-sm transition-all ease-nav-brand text-slate-500" dropdown-trigger aria-expanded="false">
-                            <i class="fa fa-bell fa-xl flex items-center justify-center cursor-pointer"></i>
-                        </a>
+            <ul class="flex flex-row justify-end pl-0 mb-0 list-none md-max:w-full">
+                <!-- notifications -->
+                <li class="relative flex items-center pr-2 mr-8">
+                    <p class="hidden transform-dropdown-show"></p>
+                    <a href="#" class="block p-0 text-sm transition-all ease-nav-brand text-slate-500" dropdown-trigger aria-expanded="false">
+                        <i class="fa fa-bell fa-xl flex items-center justify-center cursor-pointer"></i>
+                    </a>
 
-                        <ul dropdown-menu class="text-sm transform-dropdown before:font-awesome before:leading-default before:duration-350 before:ease-soft lg:shadow-soft-3xl duration-250 min-w-44 before:sm:right-7.5 before:text-5.5 pointer-events-none absolute right-0 top-0 z-50 origin-top list-none rounded-lg border-0 border-solid border-transparent bg-white bg-clip-padding px-2 py-4 text-left text-slate-500 opacity-0 transition-all before:absolute before:right-2 before:left-auto before:top-0 before:z-50 before:inline-block before:font-normal before:text-white before:antialiased before:transition-all before:content-['\f0d8'] sm:-mr-6 lg:absolute lg:right-0 lg:left-auto lg:mt-2 lg:block lg:cursor-pointer">
-                            <!-- add show class on dropdown open js -->
-                            <li class="relative mb-2">
-                                <a class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg bg-transparent px-4 duration-300 hover:bg-gray-200 hover:text-slate-700 lg:transition-colors" href="#">
-                                    <div class="flex py-1">
-                                        <div class="my-auto">
-                                            <img src="./assets/img/team-2.jpg" class="inline-flex items-center justify-center mr-4 text-sm text-white h-9 w-9 max-w-none rounded-xl" />
-                                        </div>
-                                        <div class="flex flex-col justify-center">
-                                            <h6 class="mb-1 text-sm font-normal leading-normal"><span class="font-semibold">Pesan baru</span> dari Admin</h6>
-                                            <p class="mb-0 text-xs leading-tight text-slate-400">
-                                                <i class="mr-1 fa fa-clock"></i>
-                                                13 minutes ago
-                                            </p>
-                                        </div>
+                    <ul dropdown-menu class="text-sm transform-dropdown before:font-awesome before:leading-default before:duration-350 before:ease-soft lg:shadow-soft-3xl duration-250 min-w-44 before:sm:right-7.5 before:text-5.5 pointer-events-none absolute right-0 top-0 z-50 origin-top list-none rounded-lg border-0 border-solid border-transparent bg-white bg-clip-padding px-2 py-4 text-left text-slate-500 opacity-0 transition-all before:absolute before:right-2 before:left-auto before:top-0 before:z-50 before:inline-block before:font-normal before:text-white before:antialiased before:transition-all before:content-['\f0d8'] sm:-mr-6 lg:absolute lg:right-0 lg:left-auto lg:mt-2 lg:block lg:cursor-pointer">
+                        <!-- add show class on dropdown open js -->
+                        <li class="relative mb-2">
+                            <a class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg bg-transparent px-4 duration-300 hover:bg-gray-200 hover:text-slate-700 lg:transition-colors" href="#">
+                                <div class="flex py-1">
+                                    <div class="my-auto">
+                                        <img src="./assets/img/team-2.jpg" class="inline-flex items-center justify-center mr-4 text-sm text-white h-9 w-9 max-w-none rounded-xl" />
                                     </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                                    <div class="flex flex-col justify-center">
+                                        <h6 class="mb-1 text-sm font-normal leading-normal"><span class="font-semibold">Pesan baru</span> dari Admin</h6>
+                                        <p class="mb-0 text-xs leading-tight text-slate-400">
+                                            <i class="mr-1 fa fa-clock"></i>
+                                            13 minutes ago
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
-                    <!-- profile picture  -->
+                <!-- profile picture  -->
 
-                    <li class="flex items-center">
-                        <a href="" class="block px-0 py-2 text-sm font-semibold transition-all ease-nav-brand text-slate-500">
-                            <img class="w-8 h-8 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://i.pinimg.com/474x/c7/9a/37/c79a37e13ef14be556b51143bcbb1b01.jpg" alt="foto profil">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
+                <li class="flex items-center">
+                    <a href="" class="block px-0 py-2 text-sm font-semibold transition-all ease-nav-brand text-slate-500">
+                        <img class="w-8 h-8 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://i.pinimg.com/474x/c7/9a/37/c79a37e13ef14be556b51143bcbb1b01.jpg" alt="foto profil">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
 
     <!-- end Navbar -->
 
@@ -201,7 +201,8 @@
     <main class="flex-1 overflow-y-auto p-6">
         @yield('content')
     </main>
-    </div>
+
+
     <script type="text/javascript">
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('-translate-x-full');
@@ -213,6 +214,26 @@
         }
         dropdown()
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('chart-pie').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Pusat Data', 'Follow Up Sales', 'Saved by Sales'],
+                datasets: [{
+                    data: [234, 78, 54],
+                    backgroundColor: ['#4CAF50', '#FFC107', '#FF5722']
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: false
+            }
+        });
+    </script>
+
 </body>
 
 <!-- plugin for charts  -->
@@ -225,3 +246,4 @@
 <script src="./assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
 
 </html>
+
