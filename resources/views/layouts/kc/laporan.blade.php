@@ -1,4 +1,4 @@
-@extends('layouts.kc.main')
+@extends('layouts/kc/main')
 @vite('resources/css/app.css')
 
 @section('content')
