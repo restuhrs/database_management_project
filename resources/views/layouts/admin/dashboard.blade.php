@@ -40,13 +40,13 @@
                     <hr class="h-px mt-4 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
                     <div class="ml-6 text-sm mt-6">
                         <div class="mb-4">
-                            <span class="font-semibold">Pusat Data : 234</span>
+                            <span class="font-[Poppins]">Pusat Data : 234</span>
                         </div>
                         <div class="mb-4">
-                            <span class="font-semibold">Follow Up Sales : 78</span>
+                            <span class="font-[Poppins]">Follow Up Sales : 78</span>
                         </div>
                         <div class="mb-4">
-                            <span class="font-semibold">Saved by Sales : 54</span>
+                            <span class="font-[Poppins]">Saved by Sales : 54</span>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                             <span class="font-semibold">24%</span> this month
                         </p>
 
-                        <div class="flex items-center w-56 ml-auto mt-7 mb-2">
+                        <div class="flex items-center w-56 ml-auto mt-7">
                             <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease-soft">
                                 <span class="text-sm ease-soft leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-tr-none rounded-br-none border border-r-0 border-transparent bg-transparent py-2 px-2.5 text-center font-normal text-slate-500 transition-all">
                                     <i class="fas fa-search"></i>

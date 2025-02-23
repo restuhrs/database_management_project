@@ -3,6 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('layouts/admin/laporan');
+    return view('layouts/admin/dashboard');
 });
 

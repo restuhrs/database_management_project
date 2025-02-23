@@ -40,13 +40,13 @@
                     <hr class="h-px mt-4 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
                     <div class="ml-6 text-sm mt-6">
                         <div class="mb-4">
-                            <span class="font-semibold">Pusat Data : 234</span>
+                            <span class="font-[Poppins]">Pusat Data : 234</span>
                         </div>
                         <div class="mb-4">
-                            <span class="font-semibold">Follow Up Sales : 78</span>
+                            <span class="font-[Poppins]">Follow Up Sales : 78</span>
                         </div>
                         <div class="mb-4">
-                            <span class="font-semibold">Saved by Sales : 54</span>
+                            <span class="font-[Poppins]">Saved by Sales : 54</span>
                         </div>
                     </div>
                 </div>
