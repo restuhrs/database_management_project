@@ -28,7 +28,7 @@
             <div class="w-full lg:w-7/12 px-1">
                 <div class="border-black/12.5 shadow-soft-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
-                        <span class="font-semibold text-2xl text-blue-600">Customer Databases</span>
+                        <span class="font-semibold text-2xl text-blue-700">Customer Database Pusat</span>
                         <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">4% more</span> in 2024
@@ -55,9 +55,9 @@
             <!-- card 2 -->
 
             <div class="w-full max-w-full px-3 md:w-1/2 md:flex-none lg:w-1/3 lg:flex-none">
-                <div class="border-black/12.5 shadow-soft-xl relative flex h-full min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
+                <div class="border-black/12.5 shadow-soft-xl relative flex h-full min-w-[450px] flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
-                        <span class="font-semibold text-xl text-blue-600">Sales Goals Bulan Februari</span>
+                        <span class="font-semibold text-xl text-blue-700">Sales Goals Bulan Februari</span>
                         <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">24%</span> this month
@@ -80,6 +80,7 @@
                                         <thead class="bg-gray-300 text-black">
                                             <tr>
                                                 <th class="px-4 py-2 text-center font-semibold">No.</th>
+                                                <th class="px-4 py-2 text-center font-semibold">Cabang</th>
                                                 <th class="px-4 py-2 text-center font-semibold">Nama</th>
                                                 <th class="px-4 py-2 text-center font-semibold">Follow Up</th>
                                             </tr>
@@ -87,46 +88,55 @@
                                         <tbody class="text-gray-700">
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">1</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">2</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">3</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">4</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">5</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">6</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">7</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">8</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
                                                 <td class="px-3 py-2 text-center">9</td>
+                                                <td class="px-3 py-2 text-center">TVBTG</td>
                                                 <td class="px-3 py-2 text-center">Andi</td>
                                                 <td class="px-3 py-2 text-center">50</td>
                                             </tr>

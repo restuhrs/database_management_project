@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="https://i.pinimg.com/474x/ec/fb/cc/ecfbcc8e62cbd0e18b4de89960ecb606.jpg" />
-    <title>CAR DEAL</title>
+    <title>KaizenDBengine</title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Font Awesome Icons -->
@@ -33,7 +33,7 @@
     <aside class="sidebar max-w-64 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-white p-0 antialiased shadow-lg transition-transform duration-200 xl:left-0">
         <div class="h-20 mb-2 flex items-center">
             <img src="https://i.pinimg.com/474x/ec/fb/cc/ecfbcc8e62cbd0e18b4de89960ecb606.jpg" class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-12 ml-4 bg-blue-600 rounded-lg" alt="logo" />
-            <span class="ml-5 text-gray-800 font-bold text-lg transition-all duration-200 ease-nav-brand">CAR DEAL</span>
+            <span class="ml-5 text-gray-800 font-bold text-lg transition-all duration-200 ease-nav-brand">KaizenDB</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer ml-10 transition-colors hover:text-blue-600" onclick="toggleSidebar()">
                 <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
             </svg>
@@ -146,15 +146,16 @@
                         <li class="relative mb-2">
                             <a class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg bg-transparent px-4 duration-300 hover:bg-gray-200 hover:text-slate-700 lg:transition-colors" href="#">
                                 <div class="flex py-1">
-                                    <div class="my-auto">
+                                    <!-- <div class="my-auto">
                                         <img src="./assets/img/team-2.jpg" class="inline-flex items-center justify-center mr-4 text-sm text-white h-9 w-9 max-w-none rounded-xl" />
-                                    </div>
+                                    </div> -->
                                     <div class="flex flex-col justify-center">
-                                        <h6 class="mb-1 text-sm font-normal leading-normal"><span class="font-semibold">Pesan baru</span> dari Admin</h6>
+                                        <h6>-- Coming Soon --</h6>
+                                        <!-- <h6 class="mb-1 text-sm font-normal leading-normal"><span class="font-semibold">Pesan baru</span> dari Admin</h6>
                                         <p class="mb-0 text-xs leading-tight text-slate-400">
                                             <i class="mr-1 fa fa-clock"></i>
                                             13 minutes ago
-                                        </p>
+                                        </p> -->
                                     </div>
                                 </div>
                             </a>
