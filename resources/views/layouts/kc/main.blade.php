@@ -224,7 +224,7 @@
             data: {
                 labels: ['Pusat Data', 'Follow Up Sales', 'Saved by Sales'],
                 datasets: [{
-                    data: [150, 78, 54],
+                    data: [100, 40, 40],
                     backgroundColor: ['#4CAF50', '#FFC107', '#FF5722']
                 }]
             },
