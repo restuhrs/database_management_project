@@ -1,4 +1,4 @@
-@extends('layouts/admin/main')
+@extends('layouts/spv/main')
 @vite('resources/css/app.css')
 
 @section('content')

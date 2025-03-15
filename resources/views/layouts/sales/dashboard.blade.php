@@ -29,10 +29,10 @@
                 <div class="border-black/12.5 shadow-soft-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
                         <span class="font-semibold text-2xl text-blue-700">Customer Databases</span>
-                        <p class="text-sm leading-normal">
+                        <!-- <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">4% more</span> in 2024
-                        </p>
+                        </p> -->
                     </div>
                     <div class="flex justify-center p-2 mt-4">
                         <canvas id="chart-pie" width="300" height="300"></canvas>
@@ -58,10 +58,10 @@
                 <div class="border-black/12.5 shadow-soft-xl relative flex h-full min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
                         <span class="font-semibold text-xl text-blue-700">Sales Goals Bulan Februari</span>
-                        <p class="text-sm leading-normal">
+                        <!-- <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">24%</span> this month
-                        </p>
+                        </p> -->
 
                         <div class="flex items-center w-56 ml-auto mt-7 mb-2">
                             <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease-soft">

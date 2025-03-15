@@ -41,12 +41,12 @@
             <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
                 <thead class="bg-gray-300 text-black">
                     <tr>
+                        <th class="px-4 py-2 text-center font-semibold">Cabang</th>
                         <th class="px-4 py-2 text-center font-semibold">Nama</th>
                         <th class="px-4 py-2 text-center font-semibold">Kota</th>
                         <th class="px-4 py-2 text-center font-semibold">Tanggal Lahir</th>
                         <th class="px-4 py-2 text-center font-semibold">Jenis Kendaraan</th>
                         <th class="px-4 py-2 text-center font-semibold">Salesman</th>
-                        <th class="px-4 py-2 text-center font-semibold">Cabang</th>
                         <th class="px-4 py-2 text-center font-semibold">Progress</th>
                         <th class="px-6 py-2 text-center font-semibold">Alasan</th>
                         <th class="px-4 py-2 text-center font-semibold">Aksi</th>
@@ -54,12 +54,12 @@
                 </thead>
                 <tbody class="text-gray-700">
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -85,12 +85,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -116,12 +116,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -147,12 +147,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -178,12 +178,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -209,12 +209,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -240,12 +240,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -271,12 +271,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -302,12 +302,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -333,12 +333,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
@@ -364,12 +364,12 @@
                         </td>
                     </tr>
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
+                        <td class="px-3 py-2 text-center">TVBTG</td>
                         <td class="px-3 py-2 text-center">Andi</td>
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">12/05/1990</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">Kristiawan</td>
-                        <td class="px-3 py-2 text-center">Pondok Cabe</td>
                         <td class="px-3 py-2 text-center">
                             <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
                                 Pending
