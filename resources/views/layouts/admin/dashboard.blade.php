@@ -75,7 +75,7 @@
                     <div class="flex-auto p-4">
                         <div class="before:border-r-solid relative before:absolute before:top-0 before:left-4 before:h-full before:border-r-2 before:border-r-slate-100 before:content-[''] before:lg:-ml-px">
                             <div class="relative mb-4 mt-0 after:clear-both after:table after:content-['']">
-                                <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px]">
+                                <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
                                     <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
                                         <thead class="bg-gray-300 text-black">
                                             <tr>
@@ -158,7 +158,7 @@
             <div class="text-sm text-slate-500">
                 © <script>
                     document.write(new Date().getFullYear());
-                </script> CAR DEAL. All rights reserved.
+                </script> TRUST DB. All rights reserved.
             </div>
         </footer>
 </main>
