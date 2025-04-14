@@ -27,10 +27,11 @@
 
 <body class="m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
     <span class="absolute top-5 left-4 cursor-pointer" onclick="toggleSidebar()">
-        <button class="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-xl shadow-md hover:bg-blue-700">
-            <i class="fas fa-bars text-white text-xl"></i>
+        <button class="flex items-center justify-center w-12 h-12 bg-white border-2 border-blue-600 rounded-xl shadow-md hover:bg-gray-100">
+            <i class="fas fa-bars text-blue-600 text-xl"></i>
         </button>
     </span>
+
     <!-- sidenav  -->
     <aside class="sidebar max-w-64 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-white p-0 antialiased shadow-lg transition-transform duration-200 xl:left-0">
         <div class="h-20 mb-2 flex items-center">
