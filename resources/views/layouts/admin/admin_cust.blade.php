@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px]">
+        <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
             <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
                 <thead class="bg-gray-300 text-black">
                     <tr>
@@ -452,7 +452,7 @@
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
-                        CAR DEAL. All rights reserved.
+                        TRUST DB. All rights reserved.
                     </div>
                 </div>
             </div>
