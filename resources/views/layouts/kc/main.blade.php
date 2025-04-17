@@ -23,6 +23,7 @@
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
     <!-- Tailwind css icons -->
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body class="m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
