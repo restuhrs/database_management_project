@@ -27,7 +27,7 @@
                 <span class="font-semibold">Tambah</span>
             </button>
 
-            <div class="flex items-center w-56 ml-auto">
+            <div class="flex items-center w-64 ml-auto">
                 <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease-soft">
                     <span class="text-sm ease-soft leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-tr-none rounded-br-none border border-r-0 border-transparent bg-transparent py-2 px-2.5 text-center font-normal text-slate-500 transition-all">
                         <i class="fas fa-search"></i>
@@ -37,8 +37,8 @@
             </div>
         </div>
 
-        <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-            <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
+        <div class="w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+            <table class="w-full bg-white border border-gray-300 shadow rounded text-sm">
                 <thead class="bg-gray-300 text-black">
                     <tr>
                         <th class="px-4 py-2 text-center font-semibold">Cabang</th>
@@ -367,7 +367,6 @@
                 </tbody>
             </table>
         </div>
-    </div>
     </div>
 
     <footer class="pt-2">
