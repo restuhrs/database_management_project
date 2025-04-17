@@ -12,7 +12,7 @@ class ManageAkunController extends Controller
      */
     public function index()
     {
-        return view('layouts.kc.manage_akun');
+        return view('layouts.kacab.manage_akun');
     }
 
     /**

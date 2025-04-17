@@ -12,7 +12,7 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        return view('layouts.kc.laporan');
+        return view('layouts.kacab.laporan');
     }
 
     /**

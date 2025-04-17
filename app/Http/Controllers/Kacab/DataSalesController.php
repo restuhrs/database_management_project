@@ -12,7 +12,7 @@ class DataSalesController extends Controller
      */
     public function index()
     {
-        return view('layouts.kc.data_sales');
+        return view('layouts.kacab.data_sales');
     }
 
     /**

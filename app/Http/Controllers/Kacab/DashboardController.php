@@ -12,7 +12,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('layouts.kc.dashboard');
+        return view('layouts.kacab.dashboard');
     }
 
     /**

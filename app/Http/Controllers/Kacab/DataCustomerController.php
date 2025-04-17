@@ -12,7 +12,7 @@ class DataCustomerController extends Controller
      */
     public function index()
     {
-        return view('layouts.kc.data_cust');
+        return view('layouts.kacab.data_cust');
     }
 
     /**
