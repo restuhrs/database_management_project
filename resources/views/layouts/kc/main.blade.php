@@ -210,7 +210,9 @@
         @yield('content')
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- sidebar -->
     <script type="text/javascript">
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('-translate-x-full');
@@ -223,7 +225,7 @@
         dropdown()
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- diagram -->
     <script>
         var ctx = document.getElementById('chart-pie').getContext('2d');
         new Chart(ctx, {
