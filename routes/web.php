@@ -14,6 +14,11 @@ use App\Http\Controllers\Kacab\LaporanController as KacabLaporanController;
 use App\Http\Controllers\Kacab\ManageAkunController as KacabManageAkunController;
 use App\Http\Controllers\Sales\DashboardController as SalesDashboardController;
 use App\Http\Controllers\Sales\LaporanController as SalesLaporanController;
+use App\Http\Controllers\Spv\DataCustomerController as SpvDataCustomerController;
+use App\Http\Controllers\Spv\DashboardController as SpvDashboardController;
+use App\Http\Controllers\Spv\DataSalesController as SpvDataSalesController;
+use App\Http\Controllers\Spv\LaporanController as SpvLaporanController;
+use App\Http\Controllers\Spv\ManageAkunController as SpvManageAkunController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -50,6 +55,12 @@ Route::middleware(['auth'])->prefix('sales')->name('sales.')->group(function () 
     Route::get('laporan', [SalesLaporanController::class, 'index'])->name('laporan');
 });
 
-//spv
-
+// Spv
+Route::middleware(['auth'])->prefix('spv')->name('spv.')->group(function () {
+    Route::get('dashboard', [SpvDashboardController::class, 'index'])->name('dashboard');
+    Route::get('data_cust', [SpvDataCustomerController::class, 'index'])->name('data_cust');
+    Route::get('data_sales', [SpvDataSalesController::class, 'index'])->name('data_sales');
+    Route::get('laporan', [SpvLaporanController::class, 'index'])->name('laporan');
+    Route::get('manage_akun', [SpvManageAkunController::class, 'index'])->name('manage_akun');
+});
 
