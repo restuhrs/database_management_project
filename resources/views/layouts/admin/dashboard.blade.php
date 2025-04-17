@@ -153,7 +153,6 @@
 
         </div>
 
-
         <footer class="w-full mt-4 flex border-t pt-4">
             <div class="text-sm text-slate-500">
                 © <script>
