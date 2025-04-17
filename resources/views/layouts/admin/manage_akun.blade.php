@@ -31,13 +31,14 @@
                 </div>
             </div>
 
-            <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-                <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
+            <div class="w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+                <table class="w-full bg-white border border-gray-300 shadow rounded text-sm">
                     <thead class="bg-gray-300 text-black">
                         <tr>
                             <th class="px-4 py-2 text-center font-semibold">ID</th>
                             <th class="px-4 py-2 text-center font-semibold">Cabang</th>
                             <th class="px-4 py-2 text-center font-semibold">Username</th>
+                            <th class="px-4 py-2 text-center font-semibold">Nama</th>
                             <th class="px-4 py-2 text-center font-semibold">Role</th>
                             <th class="px-4 py-2 text-center font-semibold">Status</th>
                             <th class="px-4 py-2 text-center font-semibold">Aksi</th>
@@ -47,6 +48,7 @@
                         <tr class="border-b hover:bg-gray-100 transition duration-200">
                             <td class="px-3 py-2 text-center">1</td>
                             <td class="px-3 py-2 text-center">TVBTG</td>
+                            <td class="px-3 py-2 text-center">fadjrisolihul</td>
                             <td class="px-3 py-2 text-center">fadjri</td>
                             <td class="px-3 py-2 text-center">admin</td>
                             <td class="px-3 py-2 text-center">
@@ -75,6 +77,7 @@
                         <tr class="border-b hover:bg-gray-100 transition duration-200">
                             <td class="px-3 py-2 text-center">1</td>
                             <td class="px-3 py-2 text-center">TVBTG</td>
+                            <td class="px-3 py-2 text-center">fadjrisolihul</td>
                             <td class="px-3 py-2 text-center">fadjri</td>
                             <td class="px-3 py-2 text-center">sales</td>
                             <td class="px-3 py-2 text-center">
@@ -103,6 +106,7 @@
                         <tr class="border-b hover:bg-gray-100 transition duration-200">
                             <td class="px-3 py-2 text-center">1</td>
                             <td class="px-3 py-2 text-center">TVBTG</td>
+                            <td class="px-3 py-2 text-center">fadjrisolihul</td>
                             <td class="px-3 py-2 text-center">fadjri</td>
                             <td class="px-3 py-2 text-center">sales</td>
                             <td class="px-3 py-2 text-center">
@@ -131,6 +135,7 @@
                         <tr class="border-b hover:bg-gray-100 transition duration-200">
                             <td class="px-3 py-2 text-center">1</td>
                             <td class="px-3 py-2 text-center">TVBTG</td>
+                            <td class="px-3 py-2 text-center">fadjrisolihul</td>
                             <td class="px-3 py-2 text-center">fadjri</td>
                             <td class="px-3 py-2 text-center">sales</td>
                             <td class="px-3 py-2 text-center">
@@ -159,6 +164,7 @@
                         <tr class="border-b hover:bg-gray-100 transition duration-200">
                             <td class="px-3 py-2 text-center">1</td>
                             <td class="px-3 py-2 text-center">TVBTG</td>
+                            <td class="px-3 py-2 text-center">fadjrisolihul</td>
                             <td class="px-3 py-2 text-center">fadjri</td>
                             <td class="px-3 py-2 text-center">sales</td>
                             <td class="px-3 py-2 text-center">
@@ -187,6 +193,7 @@
                         <tr class="border-b hover:bg-gray-100 transition duration-200">
                             <td class="px-3 py-2 text-center">1</td>
                             <td class="px-3 py-2 text-center">TVBTG</td>
+                            <td class="px-3 py-2 text-center">fadjrisolihul</td>
                             <td class="px-3 py-2 text-center">fadjri</td>
                             <td class="px-3 py-2 text-center">sales</td>
                             <td class="px-3 py-2 text-center">
@@ -215,6 +222,7 @@
                         <tr class="border-b hover:bg-gray-100 transition duration-200">
                             <td class="px-3 py-2 text-center">1</td>
                             <td class="px-3 py-2 text-center">TVBTG</td>
+                            <td class="px-3 py-2 text-center">fadjrisolihul</td>
                             <td class="px-3 py-2 text-center">fadjri</td>
                             <td class="px-3 py-2 text-center">sales</td>
                             <td class="px-3 py-2 text-center">
@@ -243,6 +251,7 @@
                         <tr class="border-b hover:bg-gray-100 transition duration-200">
                             <td class="px-3 py-2 text-center">1</td>
                             <td class="px-3 py-2 text-center">TVBTG</td>
+                            <td class="px-3 py-2 text-center">fadjrisolihul</td>
                             <td class="px-3 py-2 text-center">fadjri</td>
                             <td class="px-3 py-2 text-center">sales</td>
                             <td class="px-3 py-2 text-center">
