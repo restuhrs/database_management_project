@@ -43,6 +43,8 @@ class AuthController extends Controller
                 return redirect()->route('kacab.dashboard');
             case 'sales':
                 return redirect()->route('sales.dashboard');
+            case 'spv':
+                return redirect()->route('spv.dashboard');
             default:
                 Auth::logout();
                 session()->flash('error', 'Role tidak dikenali');
