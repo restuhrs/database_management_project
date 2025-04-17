@@ -10,7 +10,7 @@
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Nucleo Icons -->
     <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -47,7 +47,7 @@
         @endphp
 
         <div class="items-center block w-auto min-h-screen overflow-auto h-sidenav grow basis-full">
-            <ul class="flex flex-col pl-0 mb-0">
+            <ul class="flex flex-col pl-0 mb-0 py-5">
                 <li class="mt-2 w-full">
                     <a href="{{ route($role . '.dashboard') }}" class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
@@ -68,7 +68,7 @@
                     </a>
                 </li>
 
-                <li class="mt-0.5 w-full">
+                <li class="mt-0.5 w-full py-5">
                     <div class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600" onclick="dropdown()">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -95,7 +95,7 @@
                             </svg>
                             Data Customer
                         </a>
-                        <a href="{{$role . '.data_sales'}}" class="cursor-pointer p-2 hover:text-blue-600 rounded-md mt-1 flex items-center">
+                        <a href="{{ route($role . '.data_sales') }}" class="cursor-pointer p-2 hover:text-blue-600 rounded-md mt-1 flex items-center">
                             <svg class="w-5 h-5 mr-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 7a4 4 0 1 0-8 0 4 4 0 0 0 8 0zM2 20a7 7 0 1 1 14 0H2zM18 15a5 5 0 0 0-4 2h8a5 5 0 0 0-4-2zM18 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                             </svg>
@@ -116,7 +116,7 @@
                     </a>
                 </li>
 
-                <li class="w-full mt-6">
+                <li class="w-full mt-6 py-5">
                     <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase opacity-60">Account pages</h6>
                 </li>
 
@@ -131,7 +131,7 @@
                     </a>
                 </li>
 
-                <li class="mt-0.5 w-full">
+                <li class="mt-0.5 w-full py-5">
                     <a href="{{ route('logout') }}" class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
