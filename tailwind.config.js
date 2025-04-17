@@ -14,6 +14,9 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            boxShadow: {
+                'soft-2xl': '0px 10px 20px rgba(0, 0, 0, 0.1)',
+            },
         },
     },
     plugins: [
