@@ -1,4 +1,4 @@
-@extends('layouts/kc/main')
+@extends('layouts/admin/main')
 @vite('resources/css/app.css')
 
 @section('content')
@@ -13,13 +13,6 @@
         </div>
 
         <div class="flex items-center justify-between mb-4">
-            <button type="button" class="flex items-center gap-x-2 text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-500 dark:focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center me-2">
-                <svg class="w-5 h-5 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v9m-5 0H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2M8 9l4-5 4 5m1 8h.01" />
-                </svg>
-                <span class="font-semibold">Import Excel</span>
-            </button>
-
             <button type="button" class="flex items-center gap-x-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2 text-center me-2">
                 <svg class="w-5 h-5 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -27,7 +20,7 @@
                 <span class="font-semibold">Tambah</span>
             </button>
 
-            <div class="flex items-center w-56 ml-auto">
+            <div class="flex items-center w-64 ml-auto">
                 <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease-soft">
                     <span class="text-sm ease-soft leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-tr-none rounded-br-none border border-r-0 border-transparent bg-transparent py-2 px-2.5 text-center font-normal text-slate-500 transition-all">
                         <i class="fas fa-search"></i>
@@ -37,19 +30,17 @@
             </div>
         </div>
 
-        <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-            <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
+        <div class="w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+            <table class="w-full bg-white border border-gray-300 shadow rounded text-sm">
                 <thead class="bg-gray-300 text-black">
                     <tr>
                         <th class="px-4 py-2 text-center font-semibold">Cabang</th>
-                        <th class="px-4 py-2 text-center font-semibold">Nama Customer</th>
-                        <th class="px-4 py-2 text-center font-semibold">No Hp</th>
-                        <th class="px-4 py-2 text-center font-semibold">Kecamatan</th>
-                        <th class="px-4 py-2 text-center font-semibold">Kota</th>
-                        <th class="px-4 py-2 text-center font-semibold">Model</th>
-                        <th class="px-4 py-2 text-center font-semibold">Tahun Pembelian</th>
-                        <th class="px-4 py-2 text-center font-semibold">Progress</th>
-                        <th class="px-6 py-2 text-center font-semibold">Alasan</th>
+                        <th class="px-4 py-2 text-center font-semibold">Nama Sales</th>
+                        <th class="px-4 py-2 text-center font-semibold">Data Saved</th>
+                        <th class="px-4 py-2 text-center font-semibold">SPK</th>
+                        <th class="px-4 py-2 text-center font-semibold">Pending</th>
+                        <th class="px-4 py-2 text-center font-semibold">Reject</th>
+                        <th class="px-4 py-2 text-center font-semibold">No. Tidak Aktif</th>
                         <th class="px-4 py-2 text-center font-semibold">Aksi</th>
                     </tr>
                 </thead>
@@ -62,12 +53,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -94,12 +79,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -126,12 +105,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -158,12 +131,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -190,12 +157,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -222,12 +183,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -254,12 +209,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -286,12 +235,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -318,12 +261,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -350,12 +287,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -382,12 +313,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -414,12 +339,6 @@
                         <td class="px-3 py-2 text-center">Jakarta</td>
                         <td class="px-3 py-2 text-center">Sedan</td>
                         <td class="px-3 py-2 text-center">2018</td>
-                        <td class="px-3 py-2 text-center">
-                            <button class="bg-yellow-500 text-white py-1 px-2 rounded shadow hover:bg-yellow-600 transition">
-                                Pending
-                            </button>
-                        </td>
-                        <td class="px-6 py-2">Sedang di luar kota dan tidak bisa melakukan janji temu</td>
                         <td class="px-3 py-2 flex justify-center space-x-2">
                             <button class="bg-gray-400 text-white px-2 py-2 rounded shadow hover:bg-gray-600 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="size-5">
@@ -441,7 +360,6 @@
                 </tbody>
             </table>
         </div>
-    </div>
     </div>
 
     <footer class="pt-2">
