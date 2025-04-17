@@ -13,13 +13,6 @@
         </div>
 
         <div class="flex items-center justify-between mb-4">
-            <button type="button" class="flex items-center gap-x-2 text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-500 dark:focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center me-2">
-                <svg class="w-5 h-5 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v9m-5 0H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2M8 9l4-5 4 5m1 8h.01" />
-                </svg>
-                <span class="font-semibold">Import Excel</span>
-            </button>
-
             <button id="button-tambah"
                 class="flex items-center gap-x-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
                 <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -41,8 +34,8 @@
             </div>
         </div>
 
-        <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-            <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
+        <div class="w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+            <table class="w-full bg-white border border-gray-300 shadow rounded text-sm">
                 <thead class="bg-gray-300 text-black">
                     <tr>
                         <th class="px-4 py-2 text-center font-semibold">Cabang</th>
