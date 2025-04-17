@@ -2,7 +2,20 @@
     <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto relative">
 
         <!-- Tombol Close -->
-        <button id="close-modal-edit" class="absolute top-3 right-5 text-gray-600 hover:text-gray-900 text-4xl font-bold">&times;</button>
+        <button id="close-modal" class="btn btn-circle btn-outline hover:bg-blue-100 hover:text-blue-600 transition-all duration-200 rounded-xl ">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
 
         <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Update Data Customer</h2>
         <p class="text-gray-600 mb-6 text-center">Isi form di bawah ini.</p>
