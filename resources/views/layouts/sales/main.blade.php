@@ -118,7 +118,7 @@
                     </li>
                     @else
                     <li class="text-sm leading-normal">
-                        <a class="font-bold text-blue-600" href="{{ route('sales.dashboard') }}">{{ $crumb }}</a>
+                        <a class="font-bold text-blue-600 transition-colors hover:text-blue-800" href="{{ route('sales.dashboard') }}">{{ $crumb }}</a>
                     </li>
                     @endif
                     @endforeach
