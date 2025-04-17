@@ -28,7 +28,7 @@
             <div class="w-full lg:w-7/12 px-1">
                 <div class="border-black/12.5 shadow-soft-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
-                        <span class="font-semibold text-2xl text-blue-700">Customer Database Cabang</span>
+                        <span class="font-semibold text-2xl text-blue-700">Customer Database Pusat</span>
                         <!-- <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">4% more</span> in 2024
@@ -40,13 +40,13 @@
                     <hr class="h-px mt-4 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
                     <div class="ml-6 text-sm mt-6">
                         <div class="mb-4">
-                            <span class="font-[Poppins]">Pusat Data : 100</span>
+                            <span class="font-[Poppins]">Pusat Data : 500</span>
                         </div>
                         <div class="mb-4">
-                            <span class="font-[Poppins]">Follow Up Sales : 40</span>
+                            <span class="font-[Poppins]">Follow Up Sales : 150</span>
                         </div>
                         <div class="mb-4">
-                            <span class="font-[Poppins]">Saved by Sales : 40</span>
+                            <span class="font-[Poppins]">Saved by Sales : 100</span>
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,6 @@
             <!-- cards row 2 -->
 
         </div>
-
 
         <footer class="w-full mt-4 flex border-t pt-4">
             <div class="text-sm text-slate-500">
