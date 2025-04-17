@@ -147,18 +147,38 @@
 
     <!-- end sidenav -->
 
-    <!-- Navbar -->
+    @php
+    $routeName = Route::currentRouteName();
+
+    $pages = [
+    'kacab.dashboard' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Dashboard']],
+    'kacab.data_cust' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Data Customer']],
+    'kacab.data_sales' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Data Sales']],
+    'kacab.laporan' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Laporan']],
+    'kacab.manage_akun' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Manage Akun']],
+    ];
+
+    $page = $pages[$routeName] ?? ['title' => 'Halaman', 'breadcrumb' => ['Kacab', 'Halaman']];
+    @endphp
+    <!-- navbar -->
     <nav class="ml-80 flex flex-wrap items-center justify-between px-6 py-2 mx-6 transition-all shadow-lg duration-250 ease-soft-in rounded-2xl">
         <div class="flex items-center justify-between w-full px-4 py-1 mx-auto">
             <nav>
                 <!-- Breadcrumb -->
                 <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
-                    <li class="text-sm leading-normal">
-                        <a class="opacity-50 text-slate-700" href="#">Pages</a>
+                    @foreach ($page['breadcrumb'] as $index => $crumb)
+                    @if ($index === count($page['breadcrumb']) - 1)
+                    <li class="text-sm pl-2 capitalize leading-normal font-bold text-gray-800 before:content-['/'] before:pr-2 before:text-gray-600" aria-current="page">
+                        {{ $crumb }}
                     </li>
-                    <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:content-['/'] before:pr-2 before:text-gray-600" aria-current="page">Dashboard</li>
+                    @else
+                    <li class="text-sm leading-normal">
+                        <a class="font-bold text-blue-600" href="{{ route('kacab.dashboard') }}">{{ $crumb }}</a>
+                    </li>
+                    @endif
+                    @endforeach
                 </ol>
-                <h6 class="mb-0 font-bold capitalize">Dashboard</h6>
+                <h6 class="mb-0 font-bold capitalize text-gray-800">{{ $page['title'] }}</h6>
             </nav>
 
             <ul class="flex flex-row justify-end pl-0 mb-0 list-none md-max:w-full">
