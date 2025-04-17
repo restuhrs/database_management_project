@@ -33,8 +33,8 @@
             </div>
         </div>
 
-        <div class="max-w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-            <table class="min-w-max bg-white border border-gray-300 shadow rounded text-sm">
+        <div class="w-full overflow-x-auto overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+            <table class="w-full bg-white border border-gray-300 shadow rounded text-sm">
                 <thead class="bg-gray-300 text-black">
                     <tr>
                         <th class="px-4 py-2 text-center font-semibold">Cabang</th>
