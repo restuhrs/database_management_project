@@ -11,9 +11,14 @@
             @csrf
             <div>
                 <label for="cabang" class="block text-sm font-medium text-gray-700 mb-1">Cabang</label>
-                <input type="text" id="cabang" name="cabang" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan cabang">
+                <select id="cabang" name="cabang" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
+                    <option value="" disabled selected>-- Pilih --</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="solo">Solo</option>
+                    <option value="bogor">Bogor</option>
+                </select>
             </div>
             <div>
                 <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
@@ -55,7 +60,7 @@
                 <label for="gender" class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
                 <select id="gender" name="gender" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
-                    <option value="" disabled selected>Pilih gender</option>
+                    <option value="" disabled selected>-- Pilih --</option>
                     <option value="L">L</option>
                     <option value="P">P</option>
                 </select>
@@ -74,7 +79,7 @@
             </div>
             <div>
                 <label for="tgl_gatepass" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Gatepass</label>
-                <input type="text" id="tgl_gatepass" name="tgl_gatepass" required
+                <input type="date" id="tgl_gatepass" name="tgl_gatepass" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
                     placeholder="Masukkan tanggal gatepass">
             </div>
@@ -86,7 +91,7 @@
             </div>
             <div>
                 <label for="no_telp" class="block text-sm font-medium text-gray-700 mb-1">No. Telepon</label>
-                <input type="text" id="no_telp" name="no_telp" required
+                <input type="number" id="no_telp" name="no_telp" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
                     placeholder="Masukkan no telepon">
             </div>
@@ -98,9 +103,14 @@
             </div>
             <div>
                 <label for="progress" class="block text-sm font-medium text-gray-700 mb-1">Progress</label>
-                <input type="text" id="progress" name="progress" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan progress">
+                <select id="progress" name="progress" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
+                    <option value="" disabled selected>-- Pilih --</option>
+                    <option value="spk">SPK</option>
+                    <option value="pending">Pending</option>
+                    <option value="reject">Reject</option>
+                    <option value="no_tdk_aktif">No. tidak aktif</option>
+                </select>
             </div>
             <div>
                 <label for="alasan" class="block text-sm font-medium text-gray-700 mb-1">Alasan</label>
