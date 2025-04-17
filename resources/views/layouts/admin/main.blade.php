@@ -26,11 +26,11 @@
 </head>
 
 <body class="m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
-<span class="absolute top-5 left-4 cursor-pointer" onclick="toggleSidebar()">
-    <button class="flex items-center justify-center w-12 h-12 bg-white border-2 border-blue-600 rounded-xl shadow-md hover:bg-gray-100">
-        <i class="fas fa-bars text-blue-600 text-xl"></i>
-    </button>
-</span>
+    <span class="absolute top-5 left-4 cursor-pointer" onclick="toggleSidebar()">
+        <button class="flex items-center justify-center w-12 h-12 bg-white border-2 border-blue-600 rounded-xl shadow-md hover:bg-gray-100">
+            <i class="fas fa-bars text-blue-600 text-xl"></i>
+        </button>
+    </span>
 
     <!-- sidenav  -->
     <aside class="sidebar max-w-64 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-white p-0 antialiased shadow-lg transition-transform duration-200 xl:left-0">
@@ -147,18 +147,38 @@
 
     <!-- end sidenav -->
 
-    <!-- Navbar -->
+    @php
+    $routeName = Route::currentRouteName();
+
+    $pages = [
+    'admin.dashboard' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Dashboard']],
+    'admin.data_cust' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Data Customer']],
+    'admin.data_sales' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Data Sales']],
+    'admin.laporan' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Laporan']],
+    'admin.manage_akun' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Manage Akun']],
+    ];
+
+    $page = $pages[$routeName] ?? ['title' => 'Halaman', 'breadcrumb' => ['Admin', 'Halaman']];
+    @endphp
+    <!-- navbar -->
     <nav class="ml-80 flex flex-wrap items-center justify-between px-6 py-2 mx-6 transition-all shadow-lg duration-250 ease-soft-in rounded-2xl">
         <div class="flex items-center justify-between w-full px-4 py-1 mx-auto">
             <nav>
                 <!-- Breadcrumb -->
                 <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
-                    <li class="text-sm leading-normal">
-                        <a class="opacity-50 text-slate-700" href="#">Pages</a>
+                    @foreach ($page['breadcrumb'] as $index => $crumb)
+                    @if ($index === count($page['breadcrumb']) - 1)
+                    <li class="text-sm pl-2 capitalize leading-normal font-bold text-gray-800 before:content-['/'] before:pr-2 before:text-gray-600" aria-current="page">
+                        {{ $crumb }}
                     </li>
-                    <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:content-['/'] before:pr-2 before:text-gray-600" aria-current="page">Dashboard</li>
+                    @else
+                    <li class="text-sm leading-normal">
+                        <a class="font-bold text-blue-600" href="{{ route('admin.dashboard') }}">{{ $crumb }}</a>
+                    </li>
+                    @endif
+                    @endforeach
                 </ol>
-                <h6 class="mb-0 font-bold capitalize">Dashboard</h6>
+                <h6 class="mb-0 font-bold capitalize text-gray-800">{{ $page['title'] }}</h6>
             </nav>
 
             <ul class="flex flex-row justify-end pl-0 mb-0 list-none md-max:w-full">
@@ -256,4 +276,3 @@
 <script src="./assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
 
 </html>
-
