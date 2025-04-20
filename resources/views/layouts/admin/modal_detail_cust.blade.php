@@ -2,7 +2,7 @@
     <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto relative">
 
         <!-- Tombol Close -->
-        <button id="close-modal" class="btn btn-circle btn-outline hover:bg-blue-100 hover:text-blue-600 transition-all duration-200 rounded-xl ">
+        <button id="close-modal-detail" class="btn btn-circle btn-outline hover:bg-blue-100 hover:text-blue-600 transition-all duration-200 rounded-xl ">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8"
@@ -24,102 +24,67 @@
             @csrf
             <div>
                 <label for="cabang" class="block text-sm font-medium text-gray-700 mb-1">Cabang</label>
-                <input type="text" id="cabang" name="cabang" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan cabang">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Jakarta</p>
             </div>
             <div>
                 <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
-                <input type="text" id="nama" name="nama" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan nama lengkap">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Andi</p>
             </div>
             <div>
                 <label for="alamat" class="block text-sm font-medium text-gray-700 mb-1">Alamat</label>
-                <input type="text" id="alamat" name="alamat" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan alamat">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">jl. veteran No. 123</p>
             </div>
             <div>
                 <label for="kelurahan" class="block text-sm font-medium text-gray-700 mb-1">Kelurahan</label>
-                <input type="text" id="kelurahan" name="kelurahan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan kelurahan">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Sukun</p>
             </div>
             <div>
                 <label for="kecamatan" class="block text-sm font-medium text-gray-700 mb-1">Kecamatan</label>
-                <input type="text" id="kecamatan" name="kecamatan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan kecamatan">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Veteran</p>
             </div>
             <div>
                 <label for="kota" class="block text-sm font-medium text-gray-700 mb-1">Kota</label>
-                <input type="text" id="kota" name="kota" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan kota">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Malang</p>
             </div>
             <div>
                 <label for="tanggal_lahir" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Lahir</label>
-                <input type="date" id="tanggal_lahir" name="tanggal_lahir" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan tanggal lahir">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">01/01/2000</p>
             </div>
             <div>
                 <label for="gender" class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
-                <select id="gender" name="gender" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
-                    <option value="" disabled selected>Pilih gender</option>
-                    <option value="L">L</option>
-                    <option value="P">P</option>
-                </select>
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">L</p>
             </div>
             <div>
                 <label for="tipe_pelanggan" class="block text-sm font-medium text-gray-700 mb-1">Tipe Pelanggan</label>
-                <input type="text" id="tipe_pelanggan" name="tipe_pelanggan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan tipe pelanggan">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">blablabla</p>
             </div>
             <div>
                 <label for="tenor" class="block text-sm font-medium text-gray-700 mb-1">Tenor</label>
-                <input type="text" id="tenor" name="tenor" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan tenor">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Sekitar</p>
             </div>
             <div>
                 <label for="tgl_gatepass" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Gatepass</label>
-                <input type="text" id="tgl_gatepass" name="tgl_gatepass" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan tanggal gatepass">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">01/01/2025</p>
             </div>
             <div>
                 <label for="jenis_kendaraan" class="block text-sm font-medium text-gray-700 mb-1">Jenis Kendaraan</label>
-                <input type="text" id="jenis_kendaraan" name="jenis_kendaraan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan jenis kendaraan">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">sedan</p>
             </div>
             <div>
                 <label for="no_telp" class="block text-sm font-medium text-gray-700 mb-1">No. Telepon</label>
-                <input type="text" id="no_telp" name="no_telp" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan no telepon">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">082376743742</p>
             </div>
             <div>
                 <label for="sales" class="block text-sm font-medium text-gray-700 mb-1">Salesman</label>
-                <input type="text" id="sales" name="sales" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan sales">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Budi</p>
             </div>
             <div>
                 <label for="progress" class="block text-sm font-medium text-gray-700 mb-1">Progress</label>
-                <input type="text" id="progress" name="progress" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan progress">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Pending</p>
             </div>
             <div>
                 <label for="alasan" class="block text-sm font-medium text-gray-700 mb-1">Alasan</label>
-                <input type="text" id="alasan" name="alasan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan alasan">
+                <p class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">Sedang tidak bisa bertemu</p>
             </div>
         </form>
     </div>

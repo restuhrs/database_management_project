@@ -28,7 +28,7 @@
             <div class="w-full lg:w-7/12 px-1">
                 <div class="border-black/12.5 shadow-soft-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
-                        <span class="font-semibold text-2xl text-blue-700">Customer Database Pusat</span>
+                        <span class="font-semibold text-2xl text-blue-700">Customer Database SPV</span>
                         <!-- <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">4% more</span> in 2024

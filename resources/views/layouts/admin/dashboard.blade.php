@@ -25,8 +25,8 @@
         <!-- Row 1 -->
         <div class="flex flex-wrap">
             <!-- Card 1 -->
-            <div class="w-full lg:w-7/12 px-1">
-                <div class="border-black/12.5 shadow-soft-xl relative z-20 flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
+            <div class="overflow-x-auto w-full lg:w-7/12 px-1">
+                <div class="w-full sm:min-w-[300px] md:min-w-[400px] lg:min-w-[450px]">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
                         <span class="font-semibold text-2xl text-blue-700">Customer Database Pusat</span>
                         <!-- <p class="text-sm leading-normal">
@@ -40,7 +40,7 @@
                     <hr class="h-px mt-4 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
                     <div class="ml-6 text-sm mt-6">
                         <div class="mb-4">
-                            <span class="font-[Poppins]">Pusat Data : 500</span>
+                            <span class="font-[Poppins]">Big Data : 500</span>
                         </div>
                         <div class="mb-4">
                             <span class="font-[Poppins]">Follow Up Sales : 150</span>

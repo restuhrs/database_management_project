@@ -2,7 +2,7 @@
     <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto relative">
 
         <!-- Tombol Close -->
-        <button id="close-modal" class="btn btn-circle btn-outline hover:bg-blue-100 hover:text-blue-600 transition-all duration-200 rounded-xl ">
+        <button id="close-modal-edit" class="btn btn-circle btn-outline hover:bg-blue-100 hover:text-blue-600 transition-all duration-200 rounded-xl ">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8"

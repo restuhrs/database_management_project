@@ -22,10 +22,10 @@
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
     <!-- Tailwind css icons -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
-<body class="m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
+<body class="overflow-x-auto m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
     <span class="absolute top-5 left-4 cursor-pointer" onclick="toggleSidebar()">
         <button class="flex items-center justify-center w-12 h-12 bg-white border-2 border-blue-600 rounded-xl shadow-md hover:bg-gray-100">
             <i class="fas fa-bars text-blue-600 text-xl"></i>
