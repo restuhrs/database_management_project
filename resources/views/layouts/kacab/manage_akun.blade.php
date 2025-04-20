@@ -14,17 +14,6 @@
         </div>
 
         <div class="flex items-center justify-between mb-4">
-            <button id="button-tambah"
-                class="flex items-center gap-x-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
-                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-                <span class="font-semibold">Tambah</span>
-            </button>
-
-            @include('layouts.kacab.modal_tambah_akun')
-
             <div class="flex items-center w-56 ml-auto mt-7">
                 <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease-soft">
                     <span class="text-sm ease-soft leading-5.6 absolute z-50 inset-y-0 left-0 flex items-center pl-3 text-slate-500">
