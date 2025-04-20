@@ -28,7 +28,7 @@
             <div class="overflow-x-auto w-full lg:w-7/12 px-1">
                 <div class="w-full sm:min-w-[300px] md:min-w-[400px] lg:min-w-[450px]">
                     <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
-                        <span class="font-semibold text-2xl text-blue-700">Customer Database Pusat</span>
+                        <span class="font-semibold text-2xl text-blue-700">Big Data Pusat</span>
                         <!-- <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">4% more</span> in 2024
@@ -155,6 +155,27 @@
             <!-- cards row 2 -->
 
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- diagram -->
+        <script>
+            var ctx = document.getElementById('chart-pie').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Pusat Data', 'Follow Up Sales', 'Saved by Sales'],
+                    datasets: [{
+                        data: [500, 150, 100],
+                        backgroundColor: ['#4CAF50', '#FFC107', '#FF5722']
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: false
+                }
+            });
+        </script>
 
         <footer class="w-full mt-4 flex border-t pt-4">
             <div class="text-sm text-slate-500">
