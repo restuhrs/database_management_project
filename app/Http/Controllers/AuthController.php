@@ -52,6 +52,20 @@ class AuthController extends Controller
         }
     }
 
+    public function logout(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('login');
+    }
+
+    public function form_login()
+    {
+        return view('layouts.auth.form_login');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -93,18 +107,4 @@ class AuthController extends Controller
         //
     }
 
-    public function logout(Request $request)
-    {
-        Auth::guard('web')->logout();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return redirect('login');
-    }
-
-    public function form_login()
-    {
-        return view('layouts.auth.form_login');
-    }
 }
