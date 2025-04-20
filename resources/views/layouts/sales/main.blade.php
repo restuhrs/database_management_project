@@ -69,6 +69,18 @@
                 </li>
 
                 <li class="mt-0.5 w-full py-5">
+                    <a href="{{ route($role . '.follow_up') }}" class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
+                        <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
+                            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13.5 2c-.178 0-.356.013-.492.022l-.074.005a1 1 0 0 0-.934.998V11a1 1 0 0 0 1 1h7.975a1 1 0 0 0 .998-.934l.005-.074A7.04 7.04 0 0 0 22 10.5 8.5 8.5 0 0 0 13.5 2Z" />
+                                <path d="M11 6.025a1 1 0 0 0-1.065-.998 8.5 8.5 0 1 0 9.038 9.039A1 1 0 0 0 17.975 13H11V6.025Z" />
+                            </svg>
+                        </div>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Follow up</span>
+                    </a>
+                </li>
+
+                <li class="mt-0.5 w-full">
                     <a href="{{ route($role . '.laporan') }}" class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
                             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
@@ -80,7 +92,7 @@
                     </a>
                 </li>
 
-                <li class="mt-0.5 w-full ">
+                <li class="mt-0.5 w-full py-5">
                     <a href="{{ route('logout') }}" class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -100,6 +112,7 @@
 
     $pages = [
     'sales.dashboard' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Dashboard']],
+    'sales.follow_up' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Follow Up']],
     'sales.laporan' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Laporan']],
     ];
 
@@ -186,25 +199,6 @@
             document.querySelector('#arrow').classList.toggle('rotate-0');
         }
         dropdown()
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        var ctx = document.getElementById('chart-pie').getContext('2d');
-        new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Pusat Data', 'Follow Up Sales', 'Saved by Sales'],
-                datasets: [{
-                    data: [50, 30, 30],
-                    backgroundColor: ['#4CAF50', '#FFC107', '#FF5722']
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                responsive: false
-            }
-        });
     </script>
 
 </body>
