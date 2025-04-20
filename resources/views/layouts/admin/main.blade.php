@@ -91,19 +91,20 @@
 
                     <div class="flex flex-col ml-14 text-sm ease-nav-brand my-0 mx-4 whitespace-nowrap px-4 font-semibold" id="submenu">
                         <a href="{{ route($role . '.data_cust') }}" class="cursor-pointer p-2 hover:text-blue-600 rounded-md mt-1 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-4">
-                                <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" />
-                            </svg>
-                            Data Customer
-                        </a>
-                        <a href="{{ route($role . '.data_sales') }}" class="cursor-pointer p-2 hover:text-blue-600 rounded-md mt-1 flex items-center">
                             <svg class="w-5 h-5 mr-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 7a4 4 0 1 0-8 0 4 4 0 0 0 8 0zM2 20a7 7 0 1 1 14 0H2zM18 15a5 5 0 0 0-4 2h8a5 5 0 0 0-4-2zM18 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                             </svg>
-                            Data Salesman
+                            Big Data
+                        </a>
+                        <a href="{{ route($role . '.data_sales') }}" class="cursor-pointer p-2 hover:text-blue-600 rounded-md mt-1 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-4">
+                                <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" />
+                            </svg>
+                            Invalid Data
                         </a>
                     </div>
                 </li>
+
 
                 <li class="mt-0.5 w-full">
                     <a href="{{ route($role . '.laporan') }}" class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
@@ -152,8 +153,8 @@
 
     $pages = [
     'admin.dashboard' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Dashboard']],
-    'admin.data_cust' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Data Customer']],
-    'admin.data_sales' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Data Sales']],
+    'admin.data_cust' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Big Data']],
+    'admin.data_sales' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Invalid Data']],
     'admin.laporan' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Laporan']],
     'admin.manage_akun' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Manage Akun']],
     ];
@@ -243,25 +244,6 @@
             document.querySelector('#arrow').classList.toggle('rotate-0');
         }
         dropdown()
-    </script>
-
-    <!-- diagram -->
-    <script>
-        var ctx = document.getElementById('chart-pie').getContext('2d');
-        new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Pusat Data', 'Follow Up Sales', 'Saved by Sales'],
-                datasets: [{
-                    data: [500, 150, 100],
-                    backgroundColor: ['#4CAF50', '#FFC107', '#FF5722']
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                responsive: false
-            }
-        });
     </script>
 
 </body>
