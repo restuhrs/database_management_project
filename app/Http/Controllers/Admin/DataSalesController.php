@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\InvalidData;
 use Illuminate\Http\Request;
 
 class DataSalesController extends Controller
@@ -12,7 +13,8 @@ class DataSalesController extends Controller
      */
     public function index()
     {
-        return view('layouts.admin.data_sales');
+        $invalid_data = InvalidData::all();
+        return view('layouts.admin.data_sales', compact('invalid_data'));
     }
 
     /**

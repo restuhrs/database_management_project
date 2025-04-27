@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\LaporanAdmin;
 use Illuminate\Http\Request;
 
 class LaporanController extends Controller
@@ -12,7 +13,9 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        return view('layouts.admin.laporan');
+        $laporan_admins = LaporanAdmin::all();
+        return view('layouts.admin.laporan', compact('laporan_admins'));
+
     }
 
     /**

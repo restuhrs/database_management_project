@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\ManageAkun;
 use Illuminate\Http\Request;
 
 class ManageAkunController extends Controller
@@ -12,7 +13,8 @@ class ManageAkunController extends Controller
      */
     public function index()
     {
-        return view('layouts.admin.manage_akun');
+        $users = ManageAkun::all();
+        return view('layouts.admin.manage_akun', compact('users'));
     }
 
     /**
