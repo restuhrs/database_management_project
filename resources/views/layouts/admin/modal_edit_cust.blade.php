@@ -1,3 +1,5 @@
+@vite('resources/css/app.css')
+
 <div id="modal-edit" class="fixed inset-0 bg-white bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
     <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto relative">
 
@@ -20,19 +22,66 @@
         <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Update Data Customer</h2>
         <p class="text-gray-600 mb-6 text-center">Isi form di bawah ini.</p>
 
-        <form action="" method="POST" class="space-y-4">
+        <form id="form-edit" method="POST" action="">
             @csrf
+            @method('PUT')
             <div>
                 <label for="cabang" class="block text-sm font-medium text-gray-700 mb-1">Cabang</label>
-                <input type="text" id="cabang" name="cabang" required
+                <select id="cabang" name="cabang" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
+                    <option value="" disabled selected>-- Pilih --</option>
+                    <option value="bandung">TVBGT</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="solo">Solo</option>
+                    <option value="bogor">Bogor</option>
+                </select>
+            </div>
+            <div>
+                <label for="sales" class="block text-sm font-medium text-gray-700 mb-1">Salesman</label>
+                <input type="text" id="sales" name="sales" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan cabang">
+                    placeholder="Masukkan sales">
+            </div>
+            <div>
+                <label for="sumber_data" class="block text-sm font-medium text-gray-700 mb-1">Sumber Data</label>
+                <input type="text" id="sumber_data" name="sumber_data" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan sumber data">
             </div>
             <div>
                 <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
                 <input type="text" id="nama" name="nama" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
                     placeholder="Masukkan nama lengkap">
+            </div>
+            <div>
+                <label for="kota" class="block text-sm font-medium text-gray-700 mb-1">Kota</label>
+                <input type="text" id="kota" name="kota" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan kota">
+            </div>
+            <div>
+                <label for="jenis_kendaraan" class="block text-sm font-medium text-gray-700 mb-1">Jenis Kendaraan</label>
+                <input type="text" id="jenis_kendaraan" name="jenis_kendaraan" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan jenis kendaraan">
+            </div>
+            <div>
+                <label for="progress" class="block text-sm font-medium text-gray-700 mb-1">Progress</label>
+                <select id="progress" name="progress" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
+                    <option value="" disabled selected>-- Pilih --</option>
+                    <option value="spk">SPK</option>
+                    <option value="pending">Pending</option>
+                    <option value="reject">Reject</option>
+                    <option value="no_tdk_aktif">No. tidak aktif</option>
+                </select>
+            </div>
+            <div>
+                <label for="alasan" class="block text-sm font-medium text-gray-700 mb-1">Alasan</label>
+                <input type="text" id="alasan" name="alasan" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan alasan">
             </div>
             <div>
                 <label for="alamat" class="block text-sm font-medium text-gray-700 mb-1">Alamat</label>
@@ -53,12 +102,6 @@
                     placeholder="Masukkan kecamatan">
             </div>
             <div>
-                <label for="kota" class="block text-sm font-medium text-gray-700 mb-1">Kota</label>
-                <input type="text" id="kota" name="kota" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan kota">
-            </div>
-            <div>
                 <label for="tanggal_lahir" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Lahir</label>
                 <input type="date" id="tanggal_lahir" name="tanggal_lahir" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
@@ -68,7 +111,7 @@
                 <label for="gender" class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
                 <select id="gender" name="gender" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
-                    <option value="" disabled selected>Pilih gender</option>
+                    <option value="" disabled selected>-- Pilih --</option>
                     <option value="L">L</option>
                     <option value="P">P</option>
                 </select>
@@ -87,64 +130,60 @@
             </div>
             <div>
                 <label for="tgl_gatepass" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Gatepass</label>
-                <input type="text" id="tgl_gatepass" name="tgl_gatepass" required
+                <input type="date" id="tgl_gatepass" name="tgl_gatepass" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
                     placeholder="Masukkan tanggal gatepass">
             </div>
             <div>
-                <label for="jenis_kendaraan" class="block text-sm font-medium text-gray-700 mb-1">Jenis Kendaraan</label>
-                <input type="text" id="jenis_kendaraan" name="jenis_kendaraan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan jenis kendaraan">
-            </div>
-            <div>
                 <label for="no_telp" class="block text-sm font-medium text-gray-700 mb-1">No. Telepon</label>
-                <input type="text" id="no_telp" name="no_telp" required
+                <input type="number" id="no_telp" name="no_telp" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
                     placeholder="Masukkan no telepon">
             </div>
-            <div>
-                <label for="sales" class="block text-sm font-medium text-gray-700 mb-1">Salesman</label>
-                <input type="text" id="sales" name="sales" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan sales">
-            </div>
-            <div>
-                <label for="progress" class="block text-sm font-medium text-gray-700 mb-1">Progress</label>
-                <input type="text" id="progress" name="progress" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan progress">
-            </div>
-            <div>
-                <label for="alasan" class="block text-sm font-medium text-gray-700 mb-1">Alasan</label>
-                <input type="text" id="alasan" name="alasan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan alasan">
-            </div>
             <button type="submit"
-                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition">Update</button>
+                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-[1.02] hover:shadow-lg">
+                Update
+            </button>
         </form>
     </div>
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const modal = document.getElementById('modal-edit');
-        const openBtn = document.getElementById('button-edit');
-        const closeBtn = document.getElementById('close-modal-edit');
+document.addEventListener('DOMContentLoaded', function () {
+    const modalEdit = document.getElementById('modal-edit');
+    const closeModalEdit = document.getElementById('close-modal-edit');
+    const formEdit = document.getElementById('form-edit');
 
-        openBtn.addEventListener('click', () => {
-            modal.classList.remove('hidden');
-        });
+    document.querySelectorAll('.button-edit').forEach(button => {
+        button.addEventListener('click', function () {
+            const id = this.getAttribute('data-id');
+            formEdit.action = `/admin/big_data_admins/${id}`;
 
-        closeBtn.addEventListener('click', () => {
-            modal.classList.add('hidden');
-        });
+            // Isi field seperti biasa
+            formEdit.querySelector('[name="cabang"]').value = this.dataset.cabang;
+            formEdit.querySelector('[name="sales"]').value = this.dataset.sales;
+            formEdit.querySelector('[name="sumber_data"]').value = this.dataset.sumber_data;
+            formEdit.querySelector('[name="nama"]').value = this.dataset.nama;
+            formEdit.querySelector('[name="kota"]').value = this.dataset.kota;
+            formEdit.querySelector('[name="jenis_kendaraan"]').value = this.dataset.jenis_kendaraan;
+            formEdit.querySelector('[name="progress"]').value = this.dataset.progress;
+            formEdit.querySelector('[name="alasan"]').value = this.dataset.alasan;
+            formEdit.querySelector('[name="alamat"]').value = this.dataset.alamat;
+            formEdit.querySelector('[name="kelurahan"]').value = this.dataset.kelurahan;
+            formEdit.querySelector('[name="kecamatan"]').value = this.dataset.kecamatan;
+            formEdit.querySelector('[name="tanggal_lahir"]').value = this.dataset.tanggal_lahir;
+            formEdit.querySelector('[name="gender"]').value = this.dataset.gender;
+            formEdit.querySelector('[name="tipe_pelanggan"]').value = this.dataset.tipe_pelanggan;
+            formEdit.querySelector('[name="tenor"]').value = this.dataset.tenor;
+            formEdit.querySelector('[name="tgl_gatepass"]').value = this.dataset.tgl_gatepass;
+            formEdit.querySelector('[name="no_telp"]').value = this.dataset.no_telp;
 
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-            }
+            modalEdit.classList.remove('hidden');
         });
     });
+
+    closeModalEdit.addEventListener('click', function () {
+        modalEdit.classList.add('hidden');
+    });
+});
 </script>

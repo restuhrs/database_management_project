@@ -8,21 +8,20 @@
     <link rel="icon" type="image/png" href="https://i.pinimg.com/474x/ec/fb/cc/ecfbcc8e62cbd0e18b4de89960ecb606.jpg" />
     <title>TrustDB</title>
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Nucleo Icons -->
-    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- Popper -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- Main Styling -->
-    <link href="./assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
+    <link href="{{ asset('assets/css/soft-ui-dashboard-tailwind.css') }}" rel="stylesheet" />
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
-    <!-- Tailwind css icons -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
 </head>
 
 <body class="overflow-x-auto m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
@@ -48,7 +47,7 @@
         @endphp
 
         <div class="items-center block w-auto min-h-screen overflow-auto h-sidenav grow basis-full">
-            <ul class="flex flex-col pl-0 mb-0 py-5">
+            <ul class="flex flex-col pl-0 mb-0">
                 <li class="mt-2 w-full">
                     <a href="{{ route($role . '.dashboard') }}" class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
@@ -69,7 +68,7 @@
                     </a>
                 </li>
 
-                <li class="mt-0.5 w-full py-5">
+                <li class="mt-0.5 w-full">
                     <div class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600" onclick="dropdown()">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -118,7 +117,7 @@
                     </a>
                 </li>
 
-                <li class="w-full mt-6 py-5">
+                <li class="w-full mt-6">
                     <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase opacity-60">Account pages</h6>
                 </li>
 
@@ -133,7 +132,7 @@
                     </a>
                 </li>
 
-                <li class="mt-0.5 w-full py-5">
+                <li class="mt-0.5 w-full">
                     <a href="{{ route('logout') }}" class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 font-semibold transition-colors hover:text-blue-600">
                         <div class="shadow-soft-2xl mr-2 flex w-10 h-10 items-center justify-center rounded-lg bg-white stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -152,14 +151,14 @@
     $routeName = Route::currentRouteName();
 
     $pages = [
-    'admin.dashboard' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Dashboard']],
-    'admin.data_cust' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Big Data']],
-    'admin.data_sales' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Invalid Data']],
-    'admin.laporan' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Laporan']],
-    'admin.manage_akun' => ['title' => 'Hi, have a nice day', 'breadcrumb' => ['Home', 'Manage Akun']],
+    'admin.dashboard' => ['title' => '', 'breadcrumb' => ['Home', 'Dashboard']],
+    'admin.data_cust' => ['title' => '', 'breadcrumb' => ['Home', 'Big Data']],
+    'admin.data_sales' => ['title' => '', 'breadcrumb' => ['Home', 'Invalid Data']],
+    'admin.laporan' => ['title' => '', 'breadcrumb' => ['Home', 'Laporan']],
+    'admin.manage_akun' => ['title' => '', 'breadcrumb' => ['Home', 'Manage Akun']],
     ];
 
-    $page = $pages[$routeName] ?? ['title' => 'Halaman', 'breadcrumb' => ['Admin', 'Halaman']];
+    $page = $pages[$routeName] ?? ['title' => '', 'breadcrumb' => ['Admin', 'Halaman']];
     @endphp
     <!-- navbar -->
     <nav class="ml-80 flex flex-wrap items-center justify-between px-6 py-2 mx-6 transition-all shadow-lg duration-250 ease-soft-in rounded-2xl">
@@ -186,7 +185,7 @@
                 <!-- notifications -->
                 <li class="relative flex items-center pr-2 mr-8">
                     <p class="hidden transform-dropdown-show"></p>
-                    <a href="#" class="block p-0 text-sm transition-all ease-nav-brand text-slate-500" dropdown-trigger aria-expanded="false">
+                    <a class="block p-0 text-sm transition-all ease-nav-brand text-slate-500" dropdown-trigger aria-expanded="false">
                         <i class="fa fa-bell fa-xl flex items-center justify-center cursor-pointer"></i>
                     </a>
 
@@ -233,10 +232,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script src="{{ asset('assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/chartjs.min.js') }}"></script>
+    <script src="{{ asset('assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5') }}"></script>
+
     <!-- toggle sidebar -->
     <script type="text/javascript">
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('-translate-x-full');
+            document.querySelector('.sidebar').classList.toggle('-ml-64');
         }
 
         function dropdown() {
@@ -245,6 +249,29 @@
         }
         dropdown()
     </script>
+
+<script>
+    const sidebar = document.getElementById("sidebar");
+    const mainContent = document.getElementById("mainContent");
+    const toggleButton = document.getElementById("toggleSidebar");
+
+    let isSidebarOpen = true;
+
+    toggleButton.addEventListener("click", () => {
+        isSidebarOpen = !isSidebarOpen;
+
+        if (isSidebarOpen) {
+            sidebar.classList.remove("-ml-64");
+            mainContent.classList.remove("ml-0", "w-full");
+            mainContent.classList.add("ml-64", "w-[calc(100%-16rem)]");
+        } else {
+            sidebar.classList.add("-ml-64");
+            mainContent.classList.remove("ml-64", "w-[calc(100%-16rem)]");
+            mainContent.classList.add("ml-0", "w-full");
+        }
+    });
+</script>
+
 
 </body>
 

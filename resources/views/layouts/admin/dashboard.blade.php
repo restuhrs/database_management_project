@@ -21,32 +21,38 @@
             <h2 class="text-2xl font-bold mb-1 text-gray-800">Dashboard</h2>
         </div>
 
+        @php
+        $pusatData = $dashboard_admins->count();
+        $followUpSales = $dashboard_admins->sum('follow_up');
+        $savedBySales = 5;
+        @endphp
 
         <!-- Row 1 -->
         <div class="flex flex-wrap">
             <!-- Card 1 -->
             <div class="overflow-x-auto w-full lg:w-7/12 px-1">
                 <div class="w-full sm:min-w-[300px] md:min-w-[400px] lg:min-w-[450px]">
-                    <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
-                        <span class="font-semibold text-2xl text-blue-700">Big Data Pusat</span>
+                    <div class="border-black/12.5 mb-0 rounded-2xl border-b-0 border-solid bg-white p-6 pb-0">
+                        <span class="font-semibold text-blue-700">Big Data Pusat</span>
                         <!-- <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
                             <span class="font-semibold">4% more</span> in 2024
                         </p> -->
-                    </div>
-                    <div class="flex justify-center p-2 mt-4">
-                        <canvas id="chart-pie" width="300" height="300"></canvas>
-                    </div>
-                    <hr class="h-px mt-4 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
-                    <div class="ml-6 text-sm mt-6">
-                        <div class="mb-4">
-                            <span class="font-[Poppins]">Big Data : 500</span>
+
+                        <div class="flex justify-center p-2 mt-4">
+                            <canvas id="chart-doughnut" width="300" height="300"></canvas>
                         </div>
-                        <div class="mb-4">
-                            <span class="font-[Poppins]">Follow Up Sales : 150</span>
-                        </div>
-                        <div class="mb-4">
-                            <span class="font-[Poppins]">Saved by Sales : 100</span>
+                        <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
+                        <div class="ml-6 text-sm mt-6">
+                            <div class="mb-4">
+                                <span class="font-[Poppins] font-semibold">Big Data : {{ $pusatData }}</span>
+                            </div>
+                            <div class="mb-4">
+                                <span class="font-[Poppins] font-semibold">Follow Up Sales : {{ $followUpSales }}</span>
+                            </div>
+                            <div class="mb-4">
+                                <span class="font-[Poppins] font-semibold">Saved by Sales : {{ $savedBySales }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,7 +62,7 @@
 
             <div class="w-full max-w-full px-3 md:w-1/2 md:flex-none lg:w-1/3 lg:flex-none">
                 <div class="border-black/12.5 shadow-soft-xl relative flex h-full min-w-[450px] flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
-                    <div class="border-black/12.5 mb-0 rounded-t-2xl border-b-0 border-solid bg-white p-6 pb-0">
+                    <div class="border-black/12.5 mb-0 border-b-0 border-solid bg-white p-6 pb-0">
                         <span class="font-semibold text-xl text-blue-700">Sales Goals Bulan Februari</span>
                         <!-- <p class="text-sm leading-normal">
                             <i class="fa fa-arrow-up text-lime-500"></i>
@@ -88,61 +94,16 @@
                                                 <th class="px-4 py-2 text-center font-semibold">Follow Up</th>
                                             </tr>
                                         </thead>
+
                                         <tbody class="text-gray-700">
+                                            @foreach ($dashboard_admins as $dashboard_admin)
                                             <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">1</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
+                                                <td class="px-3 py-2 text-center">{{$dashboard_admin->id}}</td>
+                                                <td class="px-3 py-2 text-center">{{$dashboard_admin->cabang}}</td>
+                                                <td class="px-3 py-2 text-center">{{$dashboard_admin->nama}}</td>
+                                                <td class="px-3 py-2 text-center">{{$dashboard_admin->follow_up}}</td>
                                             </tr>
-                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">2</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
-                                            </tr>
-                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">3</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
-                                            </tr>
-                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">4</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
-                                            </tr>
-                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">5</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
-                                            </tr>
-                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">6</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
-                                            </tr>
-                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">7</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
-                                            </tr>
-                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">8</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
-                                            </tr>
-                                            <tr class="border-b hover:bg-gray-100 transition duration-200">
-                                                <td class="px-3 py-2 text-center">9</td>
-                                                <td class="px-3 py-2 text-center">TVBTG</td>
-                                                <td class="px-3 py-2 text-center">Andi</td>
-                                                <td class="px-3 py-2 text-center">50</td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -156,23 +117,60 @@
 
         </div>
 
+        <!-- fungsi dinamis diagram -->
+        <div id="chart-data"
+            data-pusat="{{ $pusatData }}"
+            data-followup="{{ $followUpSales }}"
+            data-saved="{{ $savedBySales }}">
+        </div>
+
+        <!-- js -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        <!-- diagram -->
         <script>
-            var ctx = document.getElementById('chart-pie').getContext('2d');
+            const dataElement = document.getElementById('chart-data');
+
+            const pusatData = parseInt(dataElement.dataset.pusat);
+            const followUpSales = parseInt(dataElement.dataset.followup);
+            const savedBySales = parseInt(dataElement.dataset.saved);
+
+            const ctx = document.getElementById('chart-doughnut').getContext('2d');
+
             new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
                     labels: ['Pusat Data', 'Follow Up Sales', 'Saved by Sales'],
                     datasets: [{
-                        data: [500, 150, 100],
-                        backgroundColor: ['#4CAF50', '#FFC107', '#FF5722']
+                        data: [pusatData, followUpSales, savedBySales],
+                        backgroundColor: ['#5B8DEF', '#B988FF', '#5EEAD4'],
+                        hoverOffset: 10,
                     }]
                 },
                 options: {
                     maintainAspectRatio: false,
-                    responsive: false
+                    responsive: true,
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0,0,0,0.7)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            bodyFont: {
+                                size: 14,
+                            }
+                        }
+                    }
                 }
             });
         </script>

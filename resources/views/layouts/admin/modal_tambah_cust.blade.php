@@ -1,3 +1,5 @@
+@vite('resources/css/app.css')
+
 <div id="modal-tambah" class="fixed inset-0 bg-white bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
     <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto relative">
 
@@ -20,24 +22,65 @@
         <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Tambah Data Customer</h2>
         <p class="text-gray-600 mb-6 text-center">Isi form di bawah ini.</p>
 
-        <form action="" method="POST" class="space-y-4">
+        <form action="" method="" class="space-y-4">
             @csrf
             <div>
                 <label for="cabang" class="block text-sm font-medium text-gray-700 mb-1">Cabang</label>
                 <select id="cabang" name="cabang" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
                     <option value="" disabled selected>-- Pilih --</option>
-                    <option value="bandung">Bandung</option>
+                    <option value="bandung">TVBGT</option>
                     <option value="jakarta">Jakarta</option>
                     <option value="solo">Solo</option>
                     <option value="bogor">Bogor</option>
                 </select>
             </div>
             <div>
+                <label for="sales" class="block text-sm font-medium text-gray-700 mb-1">Salesman</label>
+                <input type="text" id="sales" name="sales" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan sales">
+            </div>
+            <div>
+                <label for="sumber_data" class="block text-sm font-medium text-gray-700 mb-1">Sumber Data</label>
+                <input type="text" id="sumber_data" name="sumber_data" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan sumber data">
+            </div>
+            <div>
                 <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
                 <input type="text" id="nama" name="nama" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
                     placeholder="Masukkan nama lengkap">
+            </div>
+            <div>
+                <label for="kota" class="block text-sm font-medium text-gray-700 mb-1">Kota</label>
+                <input type="text" id="kota" name="kota" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan kota">
+            </div>
+            <div>
+                <label for="jenis_kendaraan" class="block text-sm font-medium text-gray-700 mb-1">Jenis Kendaraan</label>
+                <input type="text" id="jenis_kendaraan" name="jenis_kendaraan" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan jenis kendaraan">
+            </div>
+            <div>
+                <label for="progress" class="block text-sm font-medium text-gray-700 mb-1">Progress</label>
+                <select id="progress" name="progress" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
+                    <option value="" disabled selected>-- Pilih --</option>
+                    <option value="spk">SPK</option>
+                    <option value="pending">Pending</option>
+                    <option value="reject">Reject</option>
+                    <option value="no_tdk_aktif">No. tidak aktif</option>
+                </select>
+            </div>
+            <div>
+                <label for="alasan" class="block text-sm font-medium text-gray-700 mb-1">Alasan</label>
+                <input type="text" id="alasan" name="alasan" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
+                    placeholder="Masukkan alasan">
             </div>
             <div>
                 <label for="alamat" class="block text-sm font-medium text-gray-700 mb-1">Alamat</label>
@@ -56,12 +99,6 @@
                 <input type="text" id="kecamatan" name="kecamatan" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
                     placeholder="Masukkan kecamatan">
-            </div>
-            <div>
-                <label for="kota" class="block text-sm font-medium text-gray-700 mb-1">Kota</label>
-                <input type="text" id="kota" name="kota" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan kota">
             </div>
             <div>
                 <label for="tanggal_lahir" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Lahir</label>
@@ -97,42 +134,15 @@
                     placeholder="Masukkan tanggal gatepass">
             </div>
             <div>
-                <label for="jenis_kendaraan" class="block text-sm font-medium text-gray-700 mb-1">Jenis Kendaraan</label>
-                <input type="text" id="jenis_kendaraan" name="jenis_kendaraan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan jenis kendaraan">
-            </div>
-            <div>
                 <label for="no_telp" class="block text-sm font-medium text-gray-700 mb-1">No. Telepon</label>
                 <input type="number" id="no_telp" name="no_telp" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
                     placeholder="Masukkan no telepon">
             </div>
-            <div>
-                <label for="sales" class="block text-sm font-medium text-gray-700 mb-1">Salesman</label>
-                <input type="text" id="sales" name="sales" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan sales">
-            </div>
-            <div>
-                <label for="progress" class="block text-sm font-medium text-gray-700 mb-1">Progress</label>
-                <select id="progress" name="progress" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black">
-                    <option value="" disabled selected>-- Pilih --</option>
-                    <option value="spk">SPK</option>
-                    <option value="pending">Pending</option>
-                    <option value="reject">Reject</option>
-                    <option value="no_tdk_aktif">No. tidak aktif</option>
-                </select>
-            </div>
-            <div>
-                <label for="alasan" class="block text-sm font-medium text-gray-700 mb-1">Alasan</label>
-                <input type="text" id="alasan" name="alasan" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-white text-black"
-                    placeholder="Masukkan alasan">
-            </div>
             <button type="submit"
-                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition">Tambah</button>
+                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-[1.02] hover:shadow-lg">
+                Tambah
+            </button>
         </form>
     </div>
 </div>
@@ -144,17 +154,21 @@
         const closeBtn = document.getElementById('close-modal');
 
         openBtn.addEventListener('click', () => {
+            console.log("Tombol tambah diklik!");
             modal.classList.remove('hidden');
         });
 
         closeBtn.addEventListener('click', () => {
+            console.log("Modal ditutup!");
             modal.classList.add('hidden');
         });
 
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
+                console.log("Klik di luar modal, menutup modal!");
                 modal.classList.add('hidden');
             }
         });
     });
+
 </script>

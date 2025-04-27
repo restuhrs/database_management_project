@@ -13,7 +13,8 @@
         </div>
 
         <div class="flex items-center justify-between mb-4">
-            <button type="button" class="flex items-center gap-x-2 text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-500 dark:focus:ring-green-600 font-medium rounded-lg text-sm px-3 py-2 text-center me-2">
+            <button id="button-import"
+                class="flex items-center gap-x-2 text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
                 <svg class="w-5 h-5 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v9m-5 0H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2M8 9l4-5 4 5m1 8h.01" />
                 </svg>
@@ -38,149 +39,28 @@
                 <thead class="bg-gray-300 text-black">
                     <tr>
                         <th class="px-4 py-2 text-center font-semibold">Cabang</th>
-                        <th class="px-4 py-2 text-center font-semibold">Nama</th>
+                        <th class="px-4 py-2 text-center font-semibold">Nama Sales</th>
                         <th class="px-4 py-2 text-center font-semibold">Total Follow Up</th>
-                        <th class="px-4 py-2 text-center font-semibold">Total Saved</th>
                         <th class="px-4 py-2 text-center font-semibold">Total Kontak Valid</th>
-                        <th class="px-4 py-2 text-center font-semibold">Total kontak Tidak Valid</th>
-                        <th class="px-4 py-2 text-center font-semibold">Total Pending (%)</th>
-                        <th class="px-4 py-2 text-center font-semibold">Process (%)</th>
-                        <th class="px-6 py-2 text-center font-semibold">Closing (%)</th>
+                        <th class="px-4 py-2 text-center font-semibold">Total Kontak Tidak Valid</th>
+                        <th class="px-4 py-2 text-center font-semibold">Total Pending</th>
+                        <th class="px-4 py-2 text-center font-semibold">Total Process</th>
+                        <th class="px-6 py-2 text-center font-semibold">Total Closing</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-700">
+                    @foreach ($laporan_admins as $laporan)
                     <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
+                        <td class="px-3 py-2 text-center">{{ $laporan->cabang }}</td>
+                        <td class="px-3 py-2 text-center">{{ $laporan->nama_sales }}</td>
+                        <td class="px-3 py-2 text-center">{{ $laporan->total_follow_up }}</td>
+                        <td class="px-3 py-2 text-center">{{ $laporan->total_kontak_valid }}</td>
+                        <td class="px-3 py-2 text-center">{{ $laporan->total_kontak_tdk_valid }}</td>
+                        <td class="px-3 py-2 text-center">{{ $laporan->total_pending }}%</td>
+                        <td class="px-6 py-2 text-center">{{ $laporan->total_process }}%</td>
+                        <td class="px-6 py-2 text-center">{{ $laporan->total_closing }}%</td>
                     </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 transition duration-200">
-                        <td class="px-3 py-2 text-center">TVBTG</td>
-                        <td class="px-3 py-2 text-center">Andi</td>
-                        <td class="px-3 py-2 text-center">50</td>
-                        <td class="px-3 py-2 text-center">78</td>
-                        <td class="px-3 py-2 text-center">40</td>
-                        <td class="px-3 py-2 text-center">10</td>
-                        <td class="px-3 py-2 text-center">20</td>
-                        <td class="px-6 py-2">50</td>
-                        <td class="px-6 py-2">30</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
