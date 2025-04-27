@@ -30,29 +30,7 @@ class DataCustomerController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'cabang' => 'required|string',
-            'salesman' => 'required|string|max:255',
-            'sumber_data' => 'required|string',
-            'nama' => 'required|string',
-            'kota' => 'required|string',
-            'jenis_kendaraan'=> 'required|string',
-            'progress' => 'required|string',
-            'alasan' => 'required|string|max:30',
-            'alamat' => 'required|string',
-            'kelurahan' => 'required|string',
-            'kecamatan' => 'required|string',
-            'tanggal_lahir' => 'required|date',
-            'gender' => 'required|string|in:L,P',
-            'tipe_pelanggan' => 'required|string',
-            'tenor' => 'required|string',
-            'tgl_gatepass' => 'required|date',
-            'no_telp' => 'required|string'
-        ]);
-
-        BigDataAdmin::create($validated);
-
-        return redirect()->back()->with('success', 'Data berhasil ditambahkan');
+        //
     }
 
     /**
@@ -97,13 +75,10 @@ class DataCustomerController extends Controller
             'no_telp' => 'required|numeric',
         ]);
 
-        // Cari data berdasarkan ID
         $bigData = BigDataAdmin::findOrFail($id);
 
-        // Update data
         $bigData->update($validated);
 
-        // Redirect kembali dengan pesan sukses
         return redirect()->route('admin.data_cust')->with('success', 'Data berhasil diupdate.');
     }
 
