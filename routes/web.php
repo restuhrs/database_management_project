@@ -1,66 +1,73 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
-use App\Http\Controllers\Admin\DataCustomerController as AdminDataCustomerController;
-use App\Http\Controllers\Admin\DataSalesController as AdminDataSalesController;
-use App\Http\Controllers\Admin\LaporanController as AdminLaporanController;
-use App\Http\Controllers\Admin\ManageAkunController as AdminManageAkunController;
+use App\Http\Controllers\SalesController;
+use App\Http\Controllers\SpvController;
+use App\Http\Controllers\KcController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\Kacab\DashboardController as KacabDashboardController;
-use App\Http\Controllers\Kacab\DataCustomerController as KacabDataCustomerController;
-use App\Http\Controllers\Kacab\DataSalesController as KacabDataSalesController;
-use App\Http\Controllers\Kacab\LaporanController as KacabLaporanController;
-use App\Http\Controllers\Kacab\ManageAkunController as KacabManageAkunController;
-use App\Http\Controllers\Sales\DashboardController as SalesDashboardController;
-use App\Http\Controllers\Sales\LaporanController as SalesLaporanController;
-use App\Http\Controllers\Spv\DataCustomerController as SpvDataCustomerController;
-use App\Http\Controllers\Spv\DashboardController as SpvDashboardController;
-use App\Http\Controllers\Spv\DataSalesController as SpvDataSalesController;
-use App\Http\Controllers\Spv\LaporanController as SpvLaporanController;
-use App\Http\Controllers\Spv\ManageAkunController as SpvManageAkunController;
+use Illuminate\Support\Facades\Auth;
 
-Route::get('/', function () {
-    return view('welcome');
+// Halaman awal akan mengarah ke halaman login
+Route::get('/', [AuthController::class, 'login'])->name('login');
+
+// Proses login dengan metode POST
+Route::post('/login', [AuthController::class, 'authenticate'])->name('login.action');
+
+// Proses logout dengan metode POST
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Dashboard setelah login
+Route::middleware(['auth'])->get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+
+// Sales routes (Salesman hanya bisa mengakses dashboard mereka, followup, dan laporan)
+Route::middleware(['auth', 'role:salesman'])->group(function () {
+    Route::get('/sales/dashboard', [SalesController::class, 'dashboard'])->name('sales.dashboard');
+    Route::get('/sales/laporan', [SalesController::class, 'indexLaporan'])->name('sales.laporan.index');
+    Route::get('/sales/ekspor-laporan', [SalesController::class, 'exportSalesReport'])->name('sales.export');
+    Route::get('/sales/followup', [SalesController::class, 'followUp'])->name('sales.followup.index');
+    Route::get('/sales/followup/{id}/edit', [SalesController::class, 'editFollowUp'])->name('sales.followup.edit');
+    Route::put('/sales/followup/{id}', [SalesController::class, 'updateFollowUp'])->name('sales.followup.update');
+    Route::get('/sales/customer/{id}', [SalesController::class, 'show'])->name('sales.show');
 });
 
-Route::controller(AuthController::class)->group(function () {
-    Route::get('login', 'index')->name('login');
-    Route::get('form_login', 'form_login')->name('form_login');
-    Route::post('login', 'loginAction')->name('login.action');
-    Route::get('logout', 'logout')->middleware('auth')->name('logout');
+// Supervisor routes
+Route::middleware(['auth', 'role:supervisor'])->group(function () {
+    Route::get('/spv/dashboard', [SpvController::class, 'dashboard'])->name('spv.dashboard');
+    Route::get('/spv/laporan', [SpvController::class, 'laporan'])->name('spv.laporan.index');
+    Route::get('/spv/ekspor-laporan', [SpvController::class, 'exportFollowUpCustomers'])->name('spv.export');
+    Route::get('/spv/akun', [SpvController::class, 'indexAkun'])->name('spv.akun.index');
+    Route::get('/spv/akun/{id}', [SpvController::class, 'showAkun'])->name('spv.akun.show');
+    Route::get('/spv/akun/{id}/edit', [SpvController::class, 'editAkun'])->name('spv.akun.edit');
+    Route::put('/spv/akun/{id}', [SpvController::class, 'updateAkun'])->name('spv.akun.update');
 });
 
-// Admin
-Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
-    Route::get('data_cust', [AdminDataCustomerController::class, 'index'])->name('data_cust');
-    Route::get('data_sales', [AdminDataSalesController::class, 'index'])->name('data_sales');
-    Route::get('laporan', [AdminLaporanController::class, 'index'])->name('laporan');
-    Route::get('manage_akun', [AdminManageAkunController::class, 'index'])->name('manage_akun');
+// Kepala Cabang routes
+Route::middleware(['auth', 'role:kepala_cabang'])->group(function () {
+    Route::get('/kc/dashboard', [KcController::class, 'dashboard'])->name('kc.dashboard');
+    Route::get('/kc/laporan', [KcController::class, 'laporan'])->name('kc.laporan.index');
+    Route::get('/kc/ekspor-laporan', [KcController::class, 'exportFollowUpCustomers'])->name('kc.export');
+    Route::get('/kc/akun', [KcController::class, 'indexAkun'])->name('kc.akun.index');
+    Route::get('/kc/akun/{id}', [KcController::class, 'showAkun'])->name('kc.akun.show');
+    Route::get('/kc/akun/{id}/edit', [KcController::class, 'editAkun'])->name('kc.akun.edit');
+    Route::put('/kc/akun/{id}', [KcController::class, 'updateAkun'])->name('kc.akun.update');
 });
 
-// Kacab
-Route::middleware(['auth'])->prefix('kacab')->name('kacab.')->group(function () {
-    Route::get('dashboard', [KacabDashboardController::class, 'index'])->name('dashboard');
-    Route::get('data_cust', [KacabDataCustomerController::class, 'index'])->name('data_cust');
-    Route::get('data_sales', [KacabDataSalesController::class, 'index'])->name('data_sales');
-    Route::get('laporan', [KacabLaporanController::class, 'index'])->name('laporan');
-    Route::get('manage_akun', [KacabManageAkunController::class, 'index'])->name('manage_akun');
+// Admin routes
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/admin/laporan', [AdminController::class, 'laporan'])->name('admin.laporan.index');
+    Route::get('/admin/ekspor-laporan', [AdminController::class, 'exportSalesReport'])->name('admin.export');
+    Route::get('/admin/akun', [AdminController::class, 'indexAkun'])->name('admin.akun.index');
+    Route::get('/admin/akun/{id}', [AdminController::class, 'showAkun'])->name('admin.akun.show');
+    Route::get('/admin/akun/{id}/edit', [AdminController::class, 'editAkun'])->name('admin.akun.edit');
+    Route::put('/admin/akun/{id}', [AdminController::class, 'updateAkun'])->name('admin.akun.update');
+    Route::delete('/admin/akun/{id}', [AdminController::class, 'destroyAkun'])->name('admin.akun.destroy');
+    Route::get('/admin/cust', [AdminController::class, 'indexCust'])->name('admin.cust.index');
+    Route::get('/admin/cust/create', [AdminController::class, 'createCust'])->name('admin.cust.create');
+    Route::post('/admin/cust', [AdminController::class, 'storeCust'])->name('admin.cust.store');
+    Route::get('/admin/cust/{id}/edit', [AdminController::class, 'editCust'])->name('admin.cust.edit');
+    Route::put('/admin/cust/{id}', [AdminController::class, 'updateCust'])->name('admin.cust.update');
+    Route::get('/admin/cust/{id}', [AdminController::class, 'showCust'])->name('admin.cust.show');
+    Route::get('/admin/invalid', [AdminController::class, 'invalidCust'])->name('admin.invalid.index');
 });
-
-// Sales
-Route::middleware(['auth'])->prefix('sales')->name('sales.')->group(function () {
-    Route::get('dashboard', [SalesDashboardController::class, 'index'])->name('dashboard');
-    Route::get('laporan', [SalesLaporanController::class, 'index'])->name('laporan');
-});
-
-// Spv
-Route::middleware(['auth'])->prefix('spv')->name('spv.')->group(function () {
-    Route::get('dashboard', [SpvDashboardController::class, 'index'])->name('dashboard');
-    Route::get('data_cust', [SpvDataCustomerController::class, 'index'])->name('data_cust');
-    Route::get('data_sales', [SpvDataSalesController::class, 'index'])->name('data_sales');
-    Route::get('laporan', [SpvLaporanController::class, 'index'])->name('laporan');
-    Route::get('manage_akun', [SpvManageAkunController::class, 'index'])->name('manage_akun');
-});
-
